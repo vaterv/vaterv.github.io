@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>VUE面试题相关1</title>
+      <link href="/2022/10/08/vueqs/"/>
+      <url>/2022/10/08/vueqs/</url>
+      
+        <content type="html"><![CDATA[<h1 id="VUE-面试题相关-1"><a href="#VUE-面试题相关-1" class="headerlink" title="VUE 面试题相关 1"></a>VUE 面试题相关 1</h1><h2 id="1-什么是-MVVM-模式"><a href="#1-什么是-MVVM-模式" class="headerlink" title="1.什么是 MVVM 模式"></a>1.什么是 MVVM 模式</h2><p>MVVM 是 Model、view、view-model 的缩写。</p><ul><li>Model 代表数据层，用于存储数据和对数据进行增删改查</li><li>view 代表视图层，即 UI 界面，用于将数据模型转化成 UI 展现出来</li><li>view-model 通过双向数据连接前两者。当 Model 数据改变时通过它改 View 变视图层;反之 View 视图层改变时通过它改变 Model 数据层</li></ul><h2 id="2-双向数据绑定的原理"><a href="#2-双向数据绑定的原理" class="headerlink" title="2.双向数据绑定的原理"></a>2.双向数据绑定的原理</h2><p>Vue 数据双向绑定原理是通过<strong>数据劫持</strong>结合<strong>发布者-订阅者</strong>模式的方式来实现的。首先对数据进行<strong>监听</strong>，然后当监听的属性发生变化时则告诉<strong>订阅者</strong>是否要更新，若更新就会执行对应的<strong>更新函数</strong>从而更新视图</p><h2 id="3-数据劫持的原理"><a href="#3-数据劫持的原理" class="headerlink" title="3.数据劫持的原理"></a>3.数据劫持的原理</h2><p>通过“Object.defineProperty()”方法来劫持各个属性的 setter，getter，在数据变动时发布消息给订阅者，触发相应的监听回调,来更新函数</p><h2 id="4-vue-和-react-的区别？"><a href="#4-vue-和-react-的区别？" class="headerlink" title="4.vue 和 react 的区别？"></a>4.vue 和 react 的区别？</h2><ol><li><p><strong>组件写法差异</strong></p><ul><li>React 推荐的做法是 JSX + inline style, 也就是把 HTML 和 CSS 全都写进 JavaScript 中,即 all in js</li><li>Vue 推荐的做法是 template 的单文件组件格式(简单易懂，从传统前端转过来易于理解),即 html,css,JS 写在同一个文件(vue 也支持 JSX 写法)</li></ul></li><li><p><strong>diff 算法不同</strong></p><ul><li>Vue2 的核心 Diff 算法采用了双端比较的算法，同时从新旧 children 的两端开始进行比较，借助 key 值找到可复用的节点，再进行相关操作。</li><li>React 的 Diff 算法，是传统 Diff 算法循环递归每一个节点。同样情况下可以 Vue 的 diff 算法减少移动节点次数，减少不必要的性能损耗</li></ul></li><li><p><strong>响应式原理不同</strong></p><ul><li>Vue 自动优化，数据可变。当数据改变时，自动找到引用组件重新渲染</li><li>React 基于状态机，手动优化，数据不可变，需要 setState 驱动新的 state 替换老的 state</li></ul></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 面试相关 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>如何才能配置好express</title>
+      <link href="/2021/11/26/expressnote/"/>
+      <url>/2021/11/26/expressnote/</url>
+      
+        <content type="html"><![CDATA[<h2 id="如何才能配置好-express"><a href="#如何才能配置好-express" class="headerlink" title="如何才能配置好 express"></a>如何才能配置好 express</h2><ol><li>安装 express 包<br><code>npm install express -g</code></li><li>创建 demo 项目<br><code>Express demo</code></li><li>进入 demo 项目<br><code>Cd demo</code></li><li>根据 pacakge.json 安装需要的东西<br><code>Npm i</code></li><li>安装脚手架(方便一点，可选)<br><code>npm install express -generator -g</code></li><li>启动脚手架<br><code>Npm start</code></li><li>输入 ip 地址和端口<br><a href="http://localhost:3000/">http://localhost:3000/</a></li><li>看到页面显示 Welcome to Express 几个大字就成功了</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 安装教程 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>什么是http</title>
+      <link href="/2021/11/10/httpqs/"/>
+      <url>/2021/11/10/httpqs/</url>
+      
+        <content type="html"><![CDATA[<h2 id="什么是-http"><a href="#什么是-http" class="headerlink" title="什么是 http"></a>什么是 http</h2><p>http 是 TCP&#x2F;IP 通信协议的最上层协议之一；https 相当于 http 添加； 数字证书加密功能。</p><h3 id="http-的特点"><a href="#http-的特点" class="headerlink" title="http 的特点"></a>http 的特点</h3><ul><li><p>HTTP 是无连接的:<br>无连接的含义是限制每次连接只处理一个请求。服务器处理完客户的请求，并收到客户的应答后，即断开连接。案用这种方式可以节省传输时间。</p></li><li><p>HTTP 是媒体独立的:<br>只要客户端和服务器知道如何处理数据内容，任何类型数据都可以通过 HTTP 发送。可以发自己想发的任何信息。客户端以及服务器指定使用适合的 MIME-type 内容类型。</p></li><li><p>HTTP 是无状态的:<br>HTTP 协议是无状态协议。无状态是指协议对于事务处理没有记忆能力。缺少状态意味着如果后续处理需要前面的信息。则它必须重传，这样可能导致每次连接传送的数提信大。另一方面，在服务器不需要先前信息时它的应答就较快。</p></li></ul><h2 id="url-crack-dowm-with-me-哈哈"><a href="#url-crack-dowm-with-me-哈哈" class="headerlink" title="url crack dowm with me 哈哈"></a>url crack dowm with me 哈哈</h2><blockquote><p><a href="http://yes/?id=333&amp;vd=3101">http://yes:80?id=333&amp;vd=3101</a></p></blockquote><ol><li>？表示后面跟的是参数</li><li>&amp;用来分隔多个参数</li><li>&#x3D;后面是参数的值</li></ol><ul><li>HTTP 默认端口号是 80</li></ul><h2 id="Http-的请求方法"><a href="#Http-的请求方法" class="headerlink" title="Http 的请求方法"></a>Http 的请求方法</h2><p>HTTP&#x2F;1.1 协议中共定义了八种方法（有时也叫“动作”），来表明 Request-URL 指定的资源不同的操作方式<br>我们常用的两种请求方法： GET 和 POST 方法。</p><ul><li>GET 请求表示要获取内容，它不会修改服务器上的数据</li><li>POST 请求表示要提交内容，数据被包含在请求体中，通常会修改服务器上的内容。<br>POST 请求的参数放在请求体中网页上看不见，但可以通过 chrome 开发者工具或者抓包工具看见</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网络知识 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>什么是tcp</title>
+      <link href="/2021/11/10/tcpqs/"/>
+      <url>/2021/11/10/tcpqs/</url>
+      
+        <content type="html"><![CDATA[<h2 id="什么是-tcp"><a href="#什么是-tcp" class="headerlink" title="什么是 tcp"></a>什么是 tcp</h2><p>Tcp&#x2F;ip 网络最常用的<strong>通信协议</strong>,是当今互联网的常用标准.它完成一次通信的 5 个步骤叫做 5 个层<br><img src="https://tse3-mm.cn.bing.net/th/id/OIP-C.piOczJGdSOBWEtAbvRdLZwAAAA?w=234&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="图片"></p><p>由图可以知道它是从数据下潜到物理，此协议的特征之一就是将数据分割成<strong>小包发送</strong>,分割后的各个数据叫做数据包.也因此这样的通信被叫做数据包通信。</p><ul><li>传输数据的流程<br><img src="https://tse4-mm.cn.bing.net/th/id/OIP-C.3BMpoRJ35AMKjH2K3qQ4LQFgCx?w=335&h=168&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="图片"></li></ul><p>发送数据是封包 打包的过程是不断加头的过程<br>接收方是做与发送方相反的过程即拆包</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网络知识 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>在vue项目中用axios请求数据的方法</title>
+      <link href="/2021/10/10/axiosguide/"/>
+      <url>/2021/10/10/axiosguide/</url>
+      
+        <content type="html"><![CDATA[<h2 id="在-vue-项目中用-axios-请求数据的方法"><a href="#在-vue-项目中用-axios-请求数据的方法" class="headerlink" title="在 vue 项目中用 axios 请求数据的方法"></a>在 vue 项目中用 axios 请求数据的方法</h2><ol><li>创建 vue 项目<br><code>vue create myaxios</code></li><li>安装 axios 包<br><code>npm i axios</code></li><li>在 vue 项目的 main.js 中导入<br><code>import Axios from &#39;axios&#39;</code></li><li>挂载到 vue 上<br><code>Vue.prototype.$axios = Axios</code></li><li>此时就可以用 this.$axios 来使用了</li><li>直接发起请求,here im using get way</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">this.$axios(&#123;</span><br><span class="line">method: &quot;GET&quot;,</span><br><span class="line">url: &quot;http://localhost:3000/search/hot/detail&quot;,</span><br><span class="line">&#125;)</span><br><span class="line">.then((resp) =&gt; &#123;</span><br><span class="line">console.log(&quot;111 后端有返回&quot;);</span><br><span class="line">console.log(resp);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><ol start="7"><li>如果控制台打印出数据，我们第一次在 vue 的 axios 请求就成功了 嘻嘻</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 手册 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>express安装过程中出错</title>
+      <link href="/2021/09/10/expressinstallfix/"/>
+      <url>/2021/09/10/expressinstallfix/</url>
+      
+        <content type="html"><![CDATA[<h2 id="express-安装过程出错"><a href="#express-安装过程出错" class="headerlink" title="express 安装过程出错"></a>express 安装过程出错</h2><table><thead><tr><th>问题</th><th>找到的原因</th></tr></thead></table><p>| If you believe this might be a permissions issue,<br>please double-check the | 这个要用管理员权限打开 vscode |<br>| npm start npm ERR! Missing script: “start” |这个是我们刚刚创建了一个 express 文件 但是我们没有进入该文件 cd demo |<br>| Error: Cannot find module ‘cookie-parser’<br>Require stack: | 重新创建一个就没有问题了 |</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 找错trust me </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>编程单词</title>
+      <link href="/2021/09/02/codewords/"/>
+      <url>/2021/09/02/codewords/</url>
+      
+        <content type="html"><![CDATA[<h2 id="编程单词"><a href="#编程单词" class="headerlink" title="编程单词"></a>编程单词</h2><table><thead><tr><th>单词</th></tr></thead><tbody><tr><td>Token 令牌，标记</td></tr><tr><td>property 属性，{对象}里面的东西</td></tr><tr><td>Assign to ：给赋值，布置</td></tr><tr><td>mount 网络挂载；安装；挂接</td></tr><tr><td>proxy 网络代理伺服器；代理服务器；代理模式</td></tr><tr><td>ui user interface 的意思</td></tr><tr><td>modify 修改的；修正</td></tr><tr><td>import 导入数据</td></tr><tr><td>export 输出其它格式文件</td></tr><tr><td>component 组件；元件；构件</td></tr><tr><td>ui user interface 的意思</td></tr><tr><td>router 无线路由器</td></tr></tbody></table>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程单词 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>彭雨晴的第一篇文章</title>
+      <link href="/2020/11/09/emogirl/"/>
+      <url>/2020/11/09/emogirl/</url>
+      
+        <content type="html"><![CDATA[<h1 id="这是我的第一文章"><a href="#这是我的第一文章" class="headerlink" title="这是我的第一文章"></a>这是我的第一文章</h1><h2 id="喜欢的摇滚歌曲"><a href="#喜欢的摇滚歌曲" class="headerlink" title="喜欢的摇滚歌曲"></a>喜欢的摇滚歌曲</h2><p>歌曲<a href="https://www.bilibili.com/video/BV17u41197bS/?share_source=copy_web&vd_source=813b0cfea1023c3f2aca017db97a712c">emo girl</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
