@@ -4,7 +4,26 @@
   
     
     <entry>
-      <title>jQuery面试相关</title>
+      <title>导入iconfont的方法</title>
+      <link href="/2022/10/14/iconfontqs/"/>
+      <url>/2022/10/14/iconfontqs/</url>
+      
+        <content type="html"><![CDATA[<h2 id="导入-iconfont-的方法"><a href="#导入-iconfont-的方法" class="headerlink" title="导入 iconfont 的方法"></a>导入 iconfont 的方法</h2><ol><li>在 main.js 文件里面导入 iconfont.css 文件</li><li>可以在 css 文件里导入<br><code>@import url(&#39;https://xxx&#39;)</code></li></ol><ul><li>使用的时候<br><code>&lt;i class=&quot;iconfont icon-add&quot;&gt;&lt;/i&gt;</code></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 面试相关 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>jQuery相关1</title>
       <link href="/2022/10/14/jqqs1/"/>
       <url>/2022/10/14/jqqs1/</url>
       
@@ -23,7 +42,7 @@
     
     
     <entry>
-      <title>js面试相关2</title>
+      <title>js相关2</title>
       <link href="/2022/10/13/jsqs2/"/>
       <url>/2022/10/13/jsqs2/</url>
       
@@ -42,7 +61,7 @@
     
     
     <entry>
-      <title>js面试</title>
+      <title>js相关1</title>
       <link href="/2022/10/12/jsqs/"/>
       <url>/2022/10/12/jsqs/</url>
       
@@ -51,7 +70,7 @@
       
       <categories>
           
-          <category> 面试相关 </category>
+          <category> 网络知识 </category>
           
       </categories>
       
@@ -71,6 +90,44 @@
       <categories>
           
           <category> 面试相关 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>vue知识</title>
+      <link href="/2022/02/01/vueqs2/"/>
+      <url>/2022/02/01/vueqs2/</url>
+      
+        <content type="html"><![CDATA[<h2 id="vue-知识"><a href="#vue-知识" class="headerlink" title="vue 知识"></a>vue 知识</h2><ol><li><p>可以把一些简单的 js 指令放在 v-on 里面<br><code>&lt;button v-on :click=&quot;counter +=1 &quot;&gt;Add 1&lt;/button&gt; </code><br><code>&lt;el-button type=&quot;primary&quot; @click=&quot;innervisibleImg = true&quot;&gt;上传图片&lt;/el-button&gt;</code></p></li><li><p>vue 的生命周期<br>生命周期就是从摇篮到坟墓的整个过程，在 Vue 中实例从创建到销毁的过程，即指从创建、初始化数据、编译模板、挂载 Dom→ 渲染、更新 → 渲染、卸载等一系列过程我们可以把组件比喻成工厂里面的一条流水线。</p><pre><code>Vue生命周期总共可以分为8个阶段:创建前后, 载入前后,更新前后,销毁前销毁后，以及一些特殊场景的生命周期生命周期有哪些|生命周期|描述||-------|----||beforeCreate,created|组件实例被创建之初,组件实例已经完全创建||beforeMount,mounted|组件挂载之前,组件挂载到实例上去之后||beforeUpdate,updated|组件数据发生变化，更新之前,组件数据更新之后||beforeDestroy,destroyed|组件实例销毁之前,组件实例销毁之后||activated|keep-alive 缓存的组件激活时||deactivated|keep-alive 缓存的组件停用时调用||errorCaptured|捕获一个来自子孙组件的错误时被调用|</code></pre></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网络知识 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>webpack使用</title>
+      <link href="/2022/01/14/webpackqs/"/>
+      <url>/2022/01/14/webpackqs/</url>
+      
+        <content type="html"><![CDATA[<h2 id="webpack-使用"><a href="#webpack-使用" class="headerlink" title="webpack 使用"></a>webpack 使用</h2><pre><code>webpack是用来打包的,打包好放在dist文件夹里。</code></pre><h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>上面讲到的前端这些新的技术，其实是无法直接运行源码的，必须通过转换后才能正常运行。另一方面，现在前端工程师需要维护的代码变得及为庞大和复杂，代码维护、打包、发布等流程也变得极为繁琐，同时浪费的时间和精力也越来越多，当然人为的错误也随着流程的增加而增加了更多的出错率。致使每一个团队都希望有一种工具，能帮助整个团队在开发中能精简流程、提高效率、减少错误率。</p><p>grunt、gulp、webpack、Parcel、vite 都是常见的打包工具</p><h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><p>·代码转换:TypeScript 编译成 JavaScript、SCSS 编译成 CSS 等。<br>·文件优化:压缩 JavaScript、CSS、HTML 代码，压缩合并图片等。<br>·代码分割:提取多个页面的公共代码、提取首屏不需要执行部分的代码让其异步加载。<br>·模块合并:在采用模块化的项目里会有很多个模块和文件，需要构建功能把模块分类合并成一个文件。·自动刷新:监听本地源代码的变化，自动重新构建、刷新浏览器。<br>·代码校验:在代码被提交到仓库前需要校验代码是否符合规范，以及单元测试是否通过。<br>·自动发布:更新完代码后，自动构建出线上发布代码并传输给发布系统。</p><h3 id="webpack-配置"><a href="#webpack-配置" class="headerlink" title="webpack 配置"></a>webpack 配置</h3><ol><li>在项目文件夹中安装 webpack<br><code>npm i -D webpack webpack-cli</code></li></ol><blockquote><p>npm i -D 为 npm install –save-dev 的缩写<br>npm i -s 为 npm install –save 的缩写</p></blockquote><ol start="2"><li><p>新建一个文件夹 src ,然后新建一个文件 main.js,写一点代码测试一下<br><code>console.log( &#39;Hello world&#39;)</code></p></li><li><p>配置 package.json 命令</p></li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">&quot;build&quot; :&quot;webpack ./src/main.js&quot;&#125;</span><br></pre></td></tr></table></figure><ol start="4"><li>执行 npm run build<br>此时如果生成了一个 dist 文件夹，并且内部含有 main.js 说明已经打包成功了.</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网络知识 </category>
           
       </categories>
       
@@ -127,7 +184,7 @@
       
       <categories>
           
-          <category> 安装教程 </category>
+          <category> 教程 </category>
           
       </categories>
       
@@ -137,7 +194,45 @@
     
     
     <entry>
-      <title>css面试1</title>
+      <title>git常用命令</title>
+      <link href="/2021/11/14/gitqs2/"/>
+      <url>/2021/11/14/gitqs2/</url>
+      
+        <content type="html"><![CDATA[<h2 id="git-常用命令"><a href="#git-常用命令" class="headerlink" title="git 常用命令"></a>git 常用命令</h2><ol><li>从服务器克隆一个仓库<br><code>git clone ssh://example.com/~/www/project.git</code></li><li>从服务器拉取一个仓库<br><code>git pull &quot;仓库地址&quot;</code></li><li>查看状态<br><code>git status</code></li><li>查看不同内容<br><code>git diff</code></li><li>创建并切换分支<br><code>git checkout -b </code></li><li>跳转到主分支<br><code>git checkout master</code></li><li>添加变更过的文件<br><code>git add &quot;文件名&quot;</code></li><li>提交变更<br><code>git commit &quot;文件名&quot; -m &quot;版本信息&quot;</code></li><li>推送到自己的分支<br><code>git push origin &lt;branch&gt;</code></li><li>合并分支<br><code>git merge &quot;分支名&quot;</code></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网络知识 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>git入门教程</title>
+      <link href="/2021/11/14/gitqs/"/>
+      <url>/2021/11/14/gitqs/</url>
+      
+        <content type="html"><![CDATA[<h2 id="git-入门教程"><a href="#git-入门教程" class="headerlink" title="git 入门教程"></a>git 入门教程</h2><ol><li><p>什么是 git<br>git 是管理代码版本的工具，是分布式版本控制系统即订可以保存我们每一次的修改记录。而 github 是放代码口中央服务器，类似的还有 gitee</p></li><li><p>Git 与 SVN 区别<br>1、Git 是分布式的，SVN 不是：这是 Git 和其它非分布式(分布式即版本库在自己电脑上)的版本控制系统，例如 SVN，CVS 等，最核心的区别。<br>2、Git 把内容按元数据方式存储，而 SVN 是按文件：所有的资源控制系统都是把文件的元信息隐藏在一个类似 .svn、.cvs 等的文件夹里。</p></li><li><p>如何创建 git 本地仓库并与远程仓库连接</p><ol><li>初始化本地仓库 <code>git init </code></li><li>设置邮箱和姓名要和远程仓库中的一致<br><code>git config --global user.email &quot;邮箱&quot;</code><br><code>git config --global user.name &quot;姓名&quot;</code></li><li>配置 SSH<code>ssh-keygen -t rsa -C &quot;邮箱名称&quot;</code></li><li>成功之后，打开 C:\Users\Administrator.ssh 目录下的 id_rsa.pub 文件复制文件内容</li><li>Gitee&#x2F;GitHub 官网登录 setting-&gt;SSH</li></ol></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网络知识 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>css相关1</title>
       <link href="/2021/11/14/cssqs1/"/>
       <url>/2021/11/14/cssqs1/</url>
       
@@ -146,7 +241,7 @@
       
       <categories>
           
-          <category> 面试相关 </category>
+          <category> 网络知识 </category>
           
       </categories>
       
@@ -203,7 +298,7 @@
       
       <categories>
           
-          <category> my guidence </category>
+          <category> 手册 </category>
           
       </categories>
       
