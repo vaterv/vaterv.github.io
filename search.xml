@@ -4,25 +4,6 @@
   
     
     <entry>
-      <title>导入iconfont的方法</title>
-      <link href="/2022/10/14/iconfontqs/"/>
-      <url>/2022/10/14/iconfontqs/</url>
-      
-        <content type="html"><![CDATA[<h2 id="导入-iconfont-的方法"><a href="#导入-iconfont-的方法" class="headerlink" title="导入 iconfont 的方法"></a>导入 iconfont 的方法</h2><ol><li>在 main.js 文件里面导入 iconfont.css 文件</li><li>可以在 css 文件里导入<br><code>@import url(&#39;https://xxx&#39;)</code></li></ol><ul><li>使用的时候<br><code>&lt;i class=&quot;iconfont icon-add&quot;&gt;&lt;/i&gt;</code></li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> 面试相关 </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>jQuery相关1</title>
       <link href="/2022/10/14/jqqs1/"/>
       <url>/2022/10/14/jqqs1/</url>
@@ -99,11 +80,30 @@
     
     
     <entry>
-      <title>vue知识</title>
+      <title>如何理解JS中的this关键词</title>
+      <link href="/2022/05/15/thisqs/"/>
+      <url>/2022/05/15/thisqs/</url>
+      
+        <content type="html"><![CDATA[<h2 id="如何理解-JS-中的-this-关键词"><a href="#如何理解-JS-中的-this-关键词" class="headerlink" title="如何理解 JS 中的 this 关键词"></a>如何理解 JS 中的 this 关键词</h2><ul><li>this 表示当前对象的一个引用,代表函数运行时，自动生成的一个内部对象,JavaScript 中 this 不是固定不变的，它会随着执行环境的改变而改变</li></ul><ol><li>全局作用域下-this 默认指向 window,在浏览器中测试可知，全局作用下 this 指向是指向 window</li><li>直接调用普通函数-this 指向 window 对于直接调用普通函数，this 的指向一定是 window</li><li>通过对象调用函数-谁调用函数，this 指向谁</li><li>显式绑定-bind、call、apply 显式绑定后，this 会明确的指向绑定对象</li><li>调用 new 关键词创建的对象实例的函数<br>构造函数或 Class 类，可以通过 new 关键词创建的对象实例，这时 this 永远的指向了实例化的对象上面</li><li>ES6 中箭头函数（()&#x3D;&gt;{}）没有 this、arguments、super 等，不受上边的规则限制，这些只依赖包含箭头函数最接近的函数中的规则，也就是外层作用域来决定 this。</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 面试相关 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>vue知识1</title>
       <link href="/2022/02/01/vueqs2/"/>
       <url>/2022/02/01/vueqs2/</url>
       
-        <content type="html"><![CDATA[<h2 id="vue-知识"><a href="#vue-知识" class="headerlink" title="vue 知识"></a>vue 知识</h2><ol><li><p>可以把一些简单的 js 指令放在 v-on 里面<br><code>&lt;button v-on :click=&quot;counter +=1 &quot;&gt;Add 1&lt;/button&gt; </code><br><code>&lt;el-button type=&quot;primary&quot; @click=&quot;innervisibleImg = true&quot;&gt;上传图片&lt;/el-button&gt;</code></p></li><li><p>vue 的生命周期<br>生命周期就是从摇篮到坟墓的整个过程，在 Vue 中实例从创建到销毁的过程，即指从创建、初始化数据、编译模板、挂载 Dom→ 渲染、更新 → 渲染、卸载等一系列过程我们可以把组件比喻成工厂里面的一条流水线。</p><pre><code>Vue生命周期总共可以分为8个阶段:创建前后, 载入前后,更新前后,销毁前销毁后，以及一些特殊场景的生命周期生命周期有哪些|生命周期|描述||-------|----||beforeCreate,created|组件实例被创建之初,组件实例已经完全创建||beforeMount,mounted|组件挂载之前,组件挂载到实例上去之后||beforeUpdate,updated|组件数据发生变化，更新之前,组件数据更新之后||beforeDestroy,destroyed|组件实例销毁之前,组件实例销毁之后||activated|keep-alive 缓存的组件激活时||deactivated|keep-alive 缓存的组件停用时调用||errorCaptured|捕获一个来自子孙组件的错误时被调用|</code></pre></li></ol>]]></content>
+        <content type="html"><![CDATA[<h2 id="vue-知识"><a href="#vue-知识" class="headerlink" title="vue 知识"></a>vue 知识</h2><ol><li><p>可以把一些简单的 js 指令放在 v-on 里面<br><code>&lt;button v-on :click=&quot;counter +=1 &quot;&gt;Add 1&lt;/button&gt; </code><br><code>&lt;el-button type=&quot;primary&quot; @click=&quot;innervisibleImg = true&quot;&gt;上传图片&lt;/el-button&gt;</code></p></li><li><p>vue 的生命周期<br>生命周期就是从摇篮到坟墓的整个过程，在 Vue 中实例从创建到销毁的过程，即指从创建、初始化数据、编译模板、挂载 Dom→ 渲染、更新 → 渲染、卸载等一系列过程我们可以把组件比喻成工厂里面的一条流水线。<br>Vue 生命周期总共可以分为 8 个阶段:创建前后, 载入前后,更新前后,销毁前销毁后，以及一些特殊场景的生命周期.<br>生命周期有哪些</p><pre><code>| 生命周期 | 描述 || -------- | ------|| beforeCreate,created | 组件实例被创建之初,组件实例已经完全创建 || beforeMount,mounted | 组件挂载之前,组件挂载到实例上去之后 || beforeUpdate,updated | 组件数据发生变化，更新之前,组件数据更新之后 || beforeDestroy,destroyed | 组件实例销毁之前,组件实例销毁之后 || activated | keep-alive 缓存的组件激活时 || deactivated | keep-alive 缓存的组件停用时调用 || errorCaptured | 捕获一个来自子孙组件的错误时被调用 |</code></pre></li><li><p>VUE 中如何避免样式冲突？<br>使用 scope 和 组件模块化</p></li><li><p>v-if 和 v-show 的区别？</p><ul><li>v-if 是根据它其后跟的条件是否为真来决定是否渲染，内容只会在指令的表达式返回 trut 值的时候被渲染.v-if 是惰性的，如果初始条件为假，则什么也不做；只有在条件第一次变为真时才开始局部编译;</li><li>v-show 是已经渲染出来，用样式控制是否可见的,用于根据条件展示元素的选项是 v-show 指令(频繁切换时使用)<br>v-show 是在任何条件下，无论首次条件是否为真，都被编译，然后被缓存，只是简单地切换元素的 CSS property display</li></ul></li><li><p>Vue2 怎么监听响应数据变化<br>在 vue2.x 版本中，数据监听是用过 Object.defineProperty 这个 API 来实现的<br>我们访问或设置对象的属性的时候，都会触发相对应的函数，然后在这个函数里返回或设置属性的值。<br>我们当然可以在触发函数的时候做我们自己想做的事情，这也就是“劫持”操作<br>在 Vue 中其实就是通过 Object.defineProperty 来劫持对象属性的 setter 和 getter 操作，并创建一个监听器，当数据发生变化的时候发出通知。</p></li><li><p>怎么理解 Vue 的 key?</p><p>key 就是一个标识，被使用在 Vue 中。再详细一点，key 被使用在 Vue 中的虚拟 DOM 中 1.只做数据展示用，不写 key 是没有任何影响的;<br>2.key 不会出现在真实 DOM 中<br>key 是给每一个 vnode(虚拟节点)的唯一 id，也是 vue 的 diff 算法（是一种逻辑）的一种优化策略。可以根据 key，更准确，更快的找到对应的 vnod 节点</p></li><li><p>VUE 的 nexttrick<br>如果没有 nextTick 更新机制，那么 num 每次更新值都会触发视图更新(上面这段代码也就是会更新 10 万次视图)，有了 nextTick 机制，只需要更新一次，所以 nextTick 本质是一种优化策略</p></li><li><p>$router和$route 的区别</p><ul><li>Rotuer 是一个实列，用来实现路由跳转、操作路由<br>this.$router.push 等</li><li>route 获取当前路由的信息的，查看数据的详情</li></ul></li><li><p>什么是 Virtual DOM<br>Virtual DOM 是一种可以预先通过 JavaScript 进行各种计算，把最终的 DOM 操作计算出来并优化，由于这个 DOM 操作属于预处理操作，并没有真实的操作 DOM，所以叫做虚拟 DOM</p></li><li><p>为什么要选择 vue.js 它解决了什么问题</p><p>Vue 有声明式，响应式的数据绑定，与组件化的开发，并且还使用了 Virtual DOM,使用了 mvvm 模式，实现了双向绑定，使数据和视图的更新更为流畅，让前端应用程序开发方便。<br>它用来构建用户界面,Vue 的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。<br>引入 Virtual DOM 会加大 Vue.js 本身的代码尺寸，也会消耗更多内存和 CPU（会更耗电）</p><blockquote><p><a href="https://www.jianshu.com/p/6307e4ed4cf4">https://www.jianshu.com/p/6307e4ed4cf4</a></p></blockquote></li><li><p>Vue.js 中组件是如何通信的</p><pre><code>| 通信方法     | 详细                                                                            || ------------ | ------------------------------------------------------------------------------- || props 父传子 | 父组件在子的标签中通过字面量传递值，子组件设置[&#39;props&#39;]属性来接收               || $emit 子传父 | 子组件用$emit 触发，第二个参数就是要传的值父组件 绑定监听器获取子组件传来的参数 || Vuex | 用于复杂关系的组件数据传递,vuex 相当于一个储存共享变量的容器 |</code></pre><ul><li>State :存放共享变量</li><li>Getter:store 中的计算属性，获取共享变量的值</li><li>Mutations:存放修改 state 的方法</li><li>Actions:异步修改 state</li></ul></li></ol>]]></content>
       
       
       <categories>
@@ -150,6 +150,44 @@
             <tag> 听 </tag>
             
         </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>web相关知识</title>
+      <link href="/2021/12/15/webqs/"/>
+      <url>/2021/12/15/webqs/</url>
+      
+        <content type="html"><![CDATA[<h2 id="web-相关知识-web-相关知识"><a href="#web-相关知识-web-相关知识" class="headerlink" title="web 相关知识 web 相关知识"></a>web 相关知识 web 相关知识</h2><ol><li><p>Package.json 有什么用<br>定义了这个项目所需要的各种模块，以及项目的配置信息（比如名称、版本、许可证等元数据）。npm install 命令根据这个配置文件，自动下载所需的模块，也就是配置项目所需的运行和开发环境</p></li><li><p>对 webpack 的使用有哪些优化建议<br>• 缩小打包作用域<br>• 充分利用缓存，提升二次构建速度<br>• 使用高版本的 webpack</p><blockquote><p>来自 <a href="https://blog.csdn.net/qq_44722915/article/details/109101979">https://blog.csdn.net/qq_44722915/article/details/109101979</a></p></blockquote></li><li><p>重绘和回流有什么区别</p><ul><li>重绘<br>当 render tree 中的一些元素需要更新属性，而这些属性只是影响元素的外观，风格，而不会影响布局的，比如 background-color。则就叫称为重绘。</li><li>回流<br>当 render tree 中的一部分(或全部)因为元素的规模尺寸，布局，隐藏等改变而需要重新构建。这就称为回流(reflow)。每个页面至少需要一次回流，就是在页面第一次加载的时候，这时候是一定会发生回流的。</li><li>区别<br>回流必将引起重绘，而重绘不一定会引起回流。比如：只有颜色改变的时候就只会发生重绘而不会引起回流</li><li>比如：添加或者删除可见的 DOM 元素，元素位置改变，元素尺寸改变——边距、填充、边框、宽度和高度，内容改变</li></ul></li><li><p>web 前端的优化策略</p><ol><li>减少不必要的消耗时间的 Http 请求数，是 web 前端开发技术的一个重要方面</li><li>优化文件的规模，这个过程包括压缩 JavaScript 和 CSS 文件以及对相应的代码进行优化。</li><li>减少 DNS 查找 DNS 查找的时间开销很大，这是国内许多网站的通病。</li><li>优化网页内容根据 CSS 这样的特性，要实现 web 的优化，可以考虑将样式表放在顶部。另外，可以将 script 放在底部，该举措是为了防止 script 脚本阻塞当前页面，从而造成下载速度较慢，页面的加载时间过长等问题的产生</li></ol></li><li><p>响应式布局是什么，如何实现响应式布局<br>响应式布局:是同一页面在不同的屏幕上有不同的布局，即只需要一套代码使页面适应不同的屏幕</p><ol><li>原生代码</li></ol><ul><li>百分比布局</li><li>媒体查询使用@media</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">    @media screen and (min-width: 768px)&#123; /*大于等于768*/</span><br><span class="line">    body&#123;</span><br><span class="line">        background-color: red;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ol start="2"><li>框架</li></ol><ul><li>elementui 的 24 栅格</li><li>Bootstrap 提供了一套响应式、移动设备优先的流式栅格系统，随着屏幕或视口（viewport）尺寸的增加，系统会自动分为最多 12 列</li></ul></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网络知识 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>vue知识2</title>
+      <link href="/2021/12/15/vueqs3/"/>
+      <url>/2021/12/15/vueqs3/</url>
+      
+        <content type="html"><![CDATA[<h2 id="vue-知识-2"><a href="#vue-知识-2" class="headerlink" title="vue 知识 2"></a>vue 知识 2</h2><ol><li><p>你是如何理解 Vue 的双向数据绑定的<br>VUE 是 MVVM 模式就是 Model–View–ViewModel 模式，对于双向绑定的理解，就是用户更新了 View，Model 的数据也自动被更新了，这种情况就是双向绑定。就是在单向绑定的基础上给可输入元素 input、textare 等添加了 change(input)事件,(change 事件触发，View 的状态就被更新了)来动态修改 model。<br>利用 Object.defineProperty 这个 API 实现了 Data 每个属性的监听和回调。</p><p>数据驱动页面方向：就是当去修改 Data 某一个属时，会通知观察者，然后观察者触发自身的回调数，进而重新渲染页面。</p></li><li><p>MVVM 和 MVC 有什么区别</p><p>MVC 是应用最广泛的软件架构之一<br>Model(模型),View(视图),Controller(控制器)。 这主要是基于分层的目的,让彼此的职责分开。C 即 Controller 指的是页面 逻辑。<br>MVC 是单向通信。也就是 View 跟 Model，必须通过 Controller 来承上启下。<br>MVC 中 Controller 演变成 MVVM 中的 ViewModel<br>-MVVM 通过数据来显示视图层而不是节点操作<br>-MVVM 主要解决了 MVC 中大量的 dom 操作使页面渲染性能降低，加载速度变慢，影响用户体验等问题。</p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网络知识 </category>
+          
+      </categories>
+      
       
     </entry>
     
@@ -289,6 +327,25 @@
     
     
     <entry>
+      <title>导入iconfont的方法</title>
+      <link href="/2021/10/14/iconfontqs/"/>
+      <url>/2021/10/14/iconfontqs/</url>
+      
+        <content type="html"><![CDATA[<h2 id="导入-iconfont-的方法"><a href="#导入-iconfont-的方法" class="headerlink" title="导入 iconfont 的方法"></a>导入 iconfont 的方法</h2><ol><li>在 main.js 文件里面导入 iconfont.css 文件</li><li>可以在 css 文件里导入<br><code>@import url(&#39;https://xxx&#39;)</code></li></ol><ul><li>使用的时候<br><code>&lt;i class=&quot;iconfont icon-add&quot;&gt;&lt;/i&gt;</code></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 面试相关 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>在vue项目中用axios请求数据的方法</title>
       <link href="/2021/10/10/axiosguide/"/>
       <url>/2021/10/10/axiosguide/</url>
@@ -301,6 +358,19 @@
           <category> 手册 </category>
           
       </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>bootstrap是什么</title>
+      <link href="/2021/09/15/bootstrapqs/"/>
+      <url>/2021/09/15/bootstrapqs/</url>
+      
+        <content type="html"><![CDATA[<pre><code>是web开发库,最具特色的是它的css样式，模态框，13分栏布局而jquery是一个 JavaScript 库</code></pre>]]></content>
+      
       
       
     </entry>
