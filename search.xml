@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>面试笔试题</title>
+      <link href="/2022/11/18/interviewqs2/"/>
+      <url>/2022/11/18/interviewqs2/</url>
+      
+        <content type="html"><![CDATA[<h2 id="判断一个-js-变量-x-是不是数组的方法？"><a href="#判断一个-js-变量-x-是不是数组的方法？" class="headerlink" title="判断一个 js 变量 x 是不是数组的方法？"></a>判断一个 js 变量 x 是不是数组的方法？</h2><ul><li>1.打印 变量 x.prototype.toString()<br>如果打印为[object Array]，则 x 是数组</li><li>2.打印 变量 x.constructor&#x3D;&#x3D;Array，如果打印为 true 则 x 是数组</li><li>3.打印 变量 x instanceof array 判断，如果打印为 true 则 x 是数组</li></ul><h2 id="请回答下列代码执行结果，并标出-console-log-的执行顺序。"><a href="#请回答下列代码执行结果，并标出-console-log-的执行顺序。" class="headerlink" title="请回答下列代码执行结果，并标出 console.log 的执行顺序。"></a>请回答下列代码执行结果，并标出 console.log 的执行顺序。</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">(function a() &#123;</span><br><span class="line">  let i = 1;</span><br><span class="line">  setTimeout(() =&gt; &#123;</span><br><span class="line">    i++;</span><br><span class="line">    console.log(i);</span><br><span class="line">  &#125;, 0);</span><br><span class="line">  new Promise((resolve) =&gt; &#123;</span><br><span class="line">    console.log(1);</span><br><span class="line">    resolve(2);</span><br><span class="line">  &#125;).then(function (res) &#123;</span><br><span class="line">    setTimeout(() =&gt; &#123;</span><br><span class="line">      console.log(i + ~~!!i);</span><br><span class="line">    &#125;, 10);</span><br><span class="line">    i = 3;</span><br><span class="line">    console.log(res);</span><br><span class="line">    console.log(i);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;)();//打印结果1，2，3，4，5</span><br></pre></td></tr></table></figure><ul><li><p>打印顺序</p><ul><li>1 console.log(1);</li><li>2 console.log(res);</li><li>3 console.log(i);</li><li>4 console.log(i + ~~!!i);</li><li>5 console.log(i);</li></ul></li></ul><h3 id="是转换成布尔值的意思，-是取整的意思"><a href="#是转换成布尔值的意思，-是取整的意思" class="headerlink" title="!!是转换成布尔值的意思，~~是取整的意思"></a>!!是转换成布尔值的意思，~~是取整的意思</h3><p>一整个函数先执行 promise 异步运算.传 resolve 的情况， 那么 promise 下一步执行 then 方法 ,resolve 刚刚传了一个参数 2</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 面试相关 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>VUE面试题相关1</title>
       <link href="/2022/10/08/vueqs/"/>
       <url>/2022/10/08/vueqs/</url>
@@ -23,7 +42,7 @@
     
     
     <entry>
-      <title>jQuery相关1</title>
+      <title>jQuery问题</title>
       <link href="/2022/10/04/jqqs1/"/>
       <url>/2022/10/04/jqqs1/</url>
       
@@ -42,7 +61,7 @@
     
     
     <entry>
-      <title>js相关2</title>
+      <title>javascript常见问题2</title>
       <link href="/2022/10/03/jsqs2/"/>
       <url>/2022/10/03/jsqs2/</url>
       
@@ -61,7 +80,7 @@
     
     
     <entry>
-      <title>js相关1</title>
+      <title>javascript常见问题</title>
       <link href="/2022/10/02/jsqs/"/>
       <url>/2022/10/02/jsqs/</url>
       
@@ -226,12 +245,6 @@
       
         <content type="html"><![CDATA[<h2 id="node-搭建最简单的服务器"><a href="#node-搭建最简单的服务器" class="headerlink" title="node 搭建最简单的服务器"></a>node 搭建最简单的服务器</h2><ol><li>引入 http 模块<br><code>var http = require(&quot;http&quot;)</code></li><li>创建监听，在有请求时，发送一个响应</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">http.createServer(function(request, response) &#123;</span><br><span class="line">response.writeHead(200, &#123; &#x27;Content-Type&#x27;: &#x27;text/plain&#x27; &#125;);    // 发送响应数据 &quot;Hello World&quot;</span><br><span class="line">response.end(&#x27;Hello World\n&#x27;);</span><br><span class="line">&#125;).listen(8888);</span><br><span class="line"></span><br></pre></td></tr></table></figure><ul><li>在服务器后台看打印一下<br><code>console.log(&#39;server runing in my server&#39;);</code></li></ul>]]></content>
       
-      
-      <categories>
-          
-          <category> 手册 </category>
-          
-      </categories>
       
       
     </entry>
