@@ -201,6 +201,25 @@
     
     
     <entry>
+      <title>封装前端请求头</title>
+      <link href="/2022/01/01/urlqs/"/>
+      <url>/2022/01/01/urlqs/</url>
+      
+        <content type="html"><![CDATA[<h2 id="封装前端请求头"><a href="#封装前端请求头" class="headerlink" title="封装前端请求头"></a>封装前端请求头</h2><ul><li>1.引入 axios 安装包对象 npm 包</li><li>2.新建 Utils&#x2F;axios.js</li><li>3.在里面自定义配置新建一个实例</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const instance = axios.create(&#123; baseURL: &#x27;https://some-domain.com/api/&#x27;, timeout: 1000, headers: &#123;&#x27;X-Custom-Header&#x27;: &#x27;foobar&#x27;&#125; &#125;);</span><br></pre></td></tr></table></figure><ul><li>4.配置请求拦截器对象.属性和对象[‘属性’]这两个用法的意义其实是一样的，都是用来调用对象的属性。config 里面就包括请求头，在这里统一配一个请求头</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">axios.interceptors.request.use(config =&gt;&#123;console.log(config)</span><br><span class="line">let token = sessionstorage.getItem( &#x27;mytoken&#x27;);//从浏览器中，获取token的值token &amp;&amp;(config.headers[ &#x27;token&#x27;] = token);//自己添加一个token到Headersreturn config;//少写一行代码,则不能实现axios接口调用。</span><br><span class="line">&#125;, error =&gt; Promise.reject(error));</span><br><span class="line"></span><br></pre></td></tr></table></figure><ul><li>5.设置响应拦截器</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">axios.interceptors.response.use(response=&gt;i</span><br><span class="line">console.log(response)//先观察响应对象的SON结构，怎么样可以拿到token?下一行就相应的进行修改response.data.token &amp;&amp; sessionStorage.setItem(&#x27;mytoken&#x27;, response.data.token);</span><br><span class="line">return response.data;//决定了在调用接口时，如何获取到数据，如何判断是否调用成功。&#125;,</span><br><span class="line">error=&gt;&#123;</span><br><span class="line">let res = error.response;</span><br><span class="line">switch(res.status)&#123; // http请求的状态码，其中401，代表token认证失败。case 401:</span><br><span class="line">sessionstorage.removeItem( &#x27; mytoken &#x27;);</span><br><span class="line">// return router.push(&quot;/login&quot; )跳转到登录页面&#125;;</span><br></pre></td></tr></table></figure><ul><li>6.在 main.js 中引入刚刚封装的 axios</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import Axios from &#x27;./util/axios.js &#x27;</span><br><span class="line">Vue.prototype.$axios = Axios;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网络知识 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>如何用和弦写一首歌</title>
       <link href="/2022/01/01/howtowritesong/"/>
       <url>/2022/01/01/howtowritesong/</url>
