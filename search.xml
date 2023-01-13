@@ -4,7 +4,7 @@
   
     
     <entry>
-      <title>机试记录</title>
+      <title>Mike机试</title>
       <link href="/2022/11/23/machinetest1/"/>
       <url>/2022/11/23/machinetest1/</url>
       
@@ -23,16 +23,16 @@
     
     
     <entry>
-      <title>面试笔试题</title>
+      <title>面试整理</title>
       <link href="/2022/11/18/interviewqs2/"/>
       <url>/2022/11/18/interviewqs2/</url>
       
-        <content type="html"><![CDATA[<h2 id="判断一个-js-变量-x-是不是数组的方法？"><a href="#判断一个-js-变量-x-是不是数组的方法？" class="headerlink" title="判断一个 js 变量 x 是不是数组的方法？"></a>判断一个 js 变量 x 是不是数组的方法？</h2><ul><li>1.打印 变量 x.prototype.toString()<br>如果打印为[object Array]，则 x 是数组</li><li>2.打印 变量 x.constructor&#x3D;&#x3D;Array，如果打印为 true 则 x 是数组</li><li>3.打印 变量 x instanceof array 判断，如果打印为 true 则 x 是数组</li></ul><h2 id="请回答下列代码执行结果，并标出-console-log-的执行顺序。"><a href="#请回答下列代码执行结果，并标出-console-log-的执行顺序。" class="headerlink" title="请回答下列代码执行结果，并标出 console.log 的执行顺序。"></a>请回答下列代码执行结果，并标出 console.log 的执行顺序。</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">(function a() &#123;</span><br><span class="line">  let i = 1;</span><br><span class="line">  setTimeout(() =&gt; &#123;</span><br><span class="line">    i++;</span><br><span class="line">    console.log(i);</span><br><span class="line">  &#125;, 0);</span><br><span class="line">  new Promise((resolve) =&gt; &#123;</span><br><span class="line">    console.log(1);</span><br><span class="line">    resolve(2);</span><br><span class="line">  &#125;).then(function (res) &#123;</span><br><span class="line">    setTimeout(() =&gt; &#123;</span><br><span class="line">      console.log(i + ~~!!i);</span><br><span class="line">    &#125;, 10);</span><br><span class="line">    i = 3;</span><br><span class="line">    console.log(res);</span><br><span class="line">    console.log(i);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;)();//打印结果1，2，3，4，5</span><br></pre></td></tr></table></figure><ul><li><p>打印顺序</p><ul><li>1 console.log(1);</li><li>2 console.log(res);</li><li>3 console.log(i);</li><li>4 console.log(i + ~~!!i);</li><li>5 console.log(i);</li></ul></li></ul><h3 id="是转换成布尔值的意思，-是取整的意思"><a href="#是转换成布尔值的意思，-是取整的意思" class="headerlink" title="!!是转换成布尔值的意思，~~是取整的意思"></a>!!是转换成布尔值的意思，~~是取整的意思</h3><p>一整个函数先执行 promise 异步运算.传 resolve 的情况， 那么 promise 下一步执行 then 方法 ,resolve 刚刚传了一个参数 2</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="判断一个-js-变量-x-是不是数组的方法？"><a href="#判断一个-js-变量-x-是不是数组的方法？" class="headerlink" title="判断一个 js 变量 x 是不是数组的方法？"></a>判断一个 js 变量 x 是不是数组的方法？</h2><ul><li>1.打印 变量 x.prototype.toString()<br>如果打印为[object Array]，则 x 是数组</li><li>2.打印 变量 x.constructor&#x3D;&#x3D;Array，如果打印为 true 则 x 是数组</li><li>3.打印 变量 x instanceof array 判断，如果打印为 true 则 x 是数组</li></ul><h2 id="请回答下列代码执行结果，并标出-console-log-的执行顺序。"><a href="#请回答下列代码执行结果，并标出-console-log-的执行顺序。" class="headerlink" title="请回答下列代码执行结果，并标出 console.log 的执行顺序。"></a>请回答下列代码执行结果，并标出 console.log 的执行顺序。</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">(function a() &#123;</span><br><span class="line">  let i = 1;</span><br><span class="line">  setTimeout(() =&gt; &#123;</span><br><span class="line">    i++;</span><br><span class="line">    console.log(i);</span><br><span class="line">  &#125;, 0);</span><br><span class="line">  new Promise((resolve) =&gt; &#123;</span><br><span class="line">    console.log(1);</span><br><span class="line">    resolve(2);</span><br><span class="line">  &#125;).then(function (res) &#123;</span><br><span class="line">    setTimeout(() =&gt; &#123;</span><br><span class="line">      console.log(i + ~~!!i);</span><br><span class="line">    &#125;, 10);</span><br><span class="line">    i = 3;</span><br><span class="line">    console.log(res);</span><br><span class="line">    console.log(i);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;)();//打印结果1，2，3，4，5</span><br></pre></td></tr></table></figure><ul><li><p>打印顺序</p><ul><li>1 console.log(1);</li><li>2 console.log(res);</li><li>3 console.log(i);</li><li>4 console.log(i + ~~!!i);</li><li>5 console.log(i);</li></ul></li></ul><h3 id="是转换成布尔值的意思，-是取整的意思"><a href="#是转换成布尔值的意思，-是取整的意思" class="headerlink" title="!!是转换成布尔值的意思，~~是取整的意思"></a>!!是转换成布尔值的意思，~~是取整的意思</h3><p>一整个函数先执行 promise 异步运算.传 resolve 的情况， 那么 promise 下一步执行 then 方法 ,resolve 刚刚传了一个参数 2</p><ol start="3"><li><p>jQuery 的美元符号$有什么作用？<br> $只是”jQuery”的别名，它是 jQuery 的选择器<br>也可以用 jQuery 来代替$，如下代码：<br>jQuery(document).ready(function(){<br>});</p></li><li><p>请使用 jQuery 将页面上的所有元素边框设置为 2px 宽的虚线？</p></li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;script language=&quot;javascript&quot; type=&quot;text/javascript&quot;&gt;</span><br><span class="line"></span><br><span class="line">$(&quot;*&quot;).css(&quot;border&quot;, &quot;2px dotted red&quot;);</span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure><ol start="5"><li><p>body 中的 onload()函数和 jQuery 中的 document.ready()有什么区别？<br>我们可以在页面中使用多个 document.ready()，但只能使用一次 onload()。</p></li><li><p>选择器的 change 事件<br><code>$(&quot;.check&quot;).cahnge(function())</code></p></li><li><p>用 jquey 查看输入框是否被选中<br><code>$(&quot;.check&quot;).prop(&quot;checked&quot;,true)</code></p></li><li><p>实现一个全选中，其他也全选中</p></li></ol><ul><li>props 可以改变输入框选择的属性<br><code>$(&quot;.check&quot;).prop(&quot;checked&quot;,$(&quot;this&quot;).prop(&quot;checked&quot;))</code></li></ul>]]></content>
       
       
       <categories>
           
-          <category> 面试相关 </category>
+          <category> 面试 </category>
           
       </categories>
       
@@ -61,26 +61,7 @@
     
     
     <entry>
-      <title>jQuery问题</title>
-      <link href="/2022/10/04/jqqs1/"/>
-      <url>/2022/10/04/jqqs1/</url>
-      
-        <content type="html"><![CDATA[<ol><li><p>jQuery 的美元符号$有什么作用？<br> $只是”jQuery”的别名，它是 jQuery 的选择器<br>也可以用 jQuery 来代替$，如下代码：<br>jQuery(document).ready(function(){<br>});</p></li><li><p>请使用 jQuery 将页面上的所有元素边框设置为 2px 宽的虚线？</p></li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;script language=&quot;javascript&quot; type=&quot;text/javascript&quot;&gt;</span><br><span class="line"></span><br><span class="line">$(&quot;*&quot;).css(&quot;border&quot;, &quot;2px dotted red&quot;);</span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure><ol start="3"><li><p>body 中的 onload()函数和 jQuery 中的 document.ready()有什么区别？<br>我们可以在页面中使用多个 document.ready()，但只能使用一次 onload()。</p></li><li><p>选择器的 change 事件<br><code>$(&quot;.check&quot;).cahnge(function())</code></p></li><li><p>用 jquey 查看输入框是否被选中<br><code>$(&quot;.check&quot;).prop(&quot;checked&quot;,true)</code></p></li><li><p>实现一个全选中，其他也全选中</p></li></ol><ul><li>props 可以改变输入框选择的属性<br><code>$(&quot;.check&quot;).prop(&quot;checked&quot;,$(&quot;this&quot;).prop(&quot;checked&quot;))</code></li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> 面试相关 </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>javascript常见问题2</title>
+      <title>javascript笔记</title>
       <link href="/2022/10/03/jsqs2/"/>
       <url>/2022/10/03/jsqs2/</url>
       
@@ -122,7 +103,7 @@
       <link href="/2022/09/10/mapqs/"/>
       <url>/2022/09/10/mapqs/</url>
       
-        <content type="html"><![CDATA[<h2 id="vue-项目中使用百度地图接口"><a href="#vue-项目中使用百度地图接口" class="headerlink" title="vue 项目中使用百度地图接口"></a>vue 项目中使用百度地图接口</h2><ol><li>注册百度地图的开发者帐号并拿到密钥</li><li>简单应用地图<br>引入<br><code>&lt;script type=&quot;text/javascript&quot; src=&quot;https://api.map.baidu.com/api?v=1.0&amp;type=webgl&amp;ak=您的密钥&quot;&gt;</code></li></ol><p>创建地图实例</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var map = new BMapGL.Map(&quot;container&quot;);// 创建地图实例</span><br><span class="line">   var point = new BMapGL.Point(116.404, 39.915);// 创建点坐标</span><br><span class="line">   map.centerAndZoom(point, 15);// 初始化地图，设置中心点坐标和地图级别</span><br></pre></td></tr></table></figure><blockquote><p>文字转自 <a href="https://blog.csdn.net/TeAmo__/article/details/123901089">https://blog.csdn.net/TeAmo__/article/details/123901089</a></p></blockquote>]]></content>
+        <content type="html"><![CDATA[<h2 id="vue-项目中使用百度地图接口"><a href="#vue-项目中使用百度地图接口" class="headerlink" title="vue 项目中使用百度地图接口"></a>vue 项目中使用百度地图接口</h2><ol><li>注册百度地图的开发者帐号并拿到密钥</li><li>简单应用地图<br>引入<br><code>&lt;script type=&quot;text/javascript&quot; src=&quot;https://api.map.baidu.com/api?v=1.0&amp;type=webgl&amp;ak=您的密钥&quot;&gt;</code></li></ol><p>创建地图实例</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var map = new BMapGL.Map(&quot;container&quot;);// 创建地图实例</span><br><span class="line">   var point = new BMapGL.Point(116.404, 39.915);// 创建点坐标</span><br><span class="line">   map.centerAndZoom(point, 15);// 初始化地图，设置中心点坐标和地图级别</span><br></pre></td></tr></table></figure><blockquote><p>参考 <a href="https://blog.csdn.net/TeAmo__/article/details/123901089">https://blog.csdn.net/TeAmo__/article/details/123901089</a></p></blockquote>]]></content>
       
       
       
@@ -131,7 +112,7 @@
     
     
     <entry>
-      <title>如何理解JS中的this关键词</title>
+      <title>JS中的this关键词</title>
       <link href="/2022/05/15/thisqs/"/>
       <url>/2022/05/15/thisqs/</url>
       
@@ -140,7 +121,7 @@
       
       <categories>
           
-          <category> 面试相关 </category>
+          <category> 网络知识 </category>
           
       </categories>
       
@@ -188,11 +169,11 @@
     
     
     <entry>
-      <title>cookie入门</title>
+      <title>cookie是什么</title>
       <link href="/2022/01/01/cookieqs/"/>
       <url>/2022/01/01/cookieqs/</url>
       
-        <content type="html"><![CDATA[<h2 id="cookie-入门"><a href="#cookie-入门" class="headerlink" title="cookie 入门"></a>cookie 入门</h2><p>Cookie 类型为小型文本文件，是某些网站为了辨别用户身份，进行 Session 跟踪而储存在用户本地终端上的数据（通常经过加密），cookie 出现就是来弥补 HTTP 无状态的问题的，Cookie 可以作为一个状态保存的状态机，用来保存用户的相关登录状态</p><blockquote><p>cookie 和 token 的区别 <a href="https://juejin.cn/post/7111349594625146887">https://juejin.cn/post/7111349594625146887</a></p></blockquote><h2 id="cookie-储存形式"><a href="#cookie-储存形式" class="headerlink" title="cookie 储存形式"></a>cookie 储存形式</h2><p>Cookie 以名&#x2F;值对形式存储 username&#x3D;John Doe，当浏览器从服务器上请求 web 页面时， 属于该页面的 cookie 会被添加到该请求中。服务端通过这种方式来获取用户的信息。</p><h2 id="在-VUE-中使用-cookie"><a href="#在-VUE-中使用-cookie" class="headerlink" title="在 VUE 中使用 cookie"></a>在 VUE 中使用 cookie</h2><ul><li>1 安装<br><code>npm install vue-cookies --save</code></li><li>2 引入</li><li>3 设置全局配置，设置 cookie 过期时间和 url</li><li><a href="https://www.jianshu.com/p/60c13168cc8f">https://www.jianshu.com/p/60c13168cc8f</a></li></ul><h2 id="session-是什么"><a href="#session-是什么" class="headerlink" title="session 是什么"></a>session 是什么</h2><p>客户端请求服务端，服务端（Tomcat）会为这次请求开辟一块内存空间，这个对象便是 Session 对象， 存储结构为 ConcurrentHashMap。</p><p>session 的目的：弥补 HTTP 无状态特性，服务器可以利用 session 存储客户端在同一个会话期间的一些操作记录。</p><h2 id="vue-使用-session"><a href="#vue-使用-session" class="headerlink" title="vue 使用 session"></a>vue 使用 session</h2><blockquote><p><a href="https://www.cnblogs.com/instead-everyone/p/14611589.html">https://www.cnblogs.com/instead-everyone/p/14611589.html</a></p></blockquote>]]></content>
+        <content type="html"><![CDATA[<h2 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h2><p>Cookie 类型为小型文本文件，是某些网站为了辨别用户身份，进行 Session 跟踪而储存在用户本地终端上的数据（通常经过加密），cookie 出现就是来弥补 HTTP 无状态的问题的，Cookie 可以作为一个状态保存的状态机，用来保存用户的相关登录状态</p><blockquote><p>cookie 和 token 的区别 <a href="https://juejin.cn/post/7111349594625146887">https://juejin.cn/post/7111349594625146887</a></p></blockquote><h2 id="cookie-储存形式"><a href="#cookie-储存形式" class="headerlink" title="cookie 储存形式"></a>cookie 储存形式</h2><p>Cookie 以名&#x2F;值对形式存储 username&#x3D;John Doe，当浏览器从服务器上请求 web 页面时， 属于该页面的 cookie 会被添加到该请求中。服务端通过这种方式来获取用户的信息。</p><h2 id="在-VUE-中使用-cookie"><a href="#在-VUE-中使用-cookie" class="headerlink" title="在 VUE 中使用 cookie"></a>在 VUE 中使用 cookie</h2><ul><li>1 安装<br><code>npm install vue-cookies --save</code></li><li>2 引入</li><li>3 设置全局配置，设置 cookie 过期时间和 url</li><li><a href="https://www.jianshu.com/p/60c13168cc8f">https://www.jianshu.com/p/60c13168cc8f</a></li></ul><h2 id="session-是什么"><a href="#session-是什么" class="headerlink" title="session 是什么"></a>session 是什么</h2><p>客户端请求服务端，服务端（Tomcat）会为这次请求开辟一块内存空间，这个对象便是 Session 对象， 存储结构为 ConcurrentHashMap。</p><p>session 的目的：弥补 HTTP 无状态特性，服务器可以利用 session 存储客户端在同一个会话期间的一些操作记录。</p><h2 id="vue-使用-session"><a href="#vue-使用-session" class="headerlink" title="vue 使用 session"></a>vue 使用 session</h2><blockquote><p><a href="https://www.cnblogs.com/instead-everyone/p/14611589.html">https://www.cnblogs.com/instead-everyone/p/14611589.html</a></p></blockquote>]]></content>
       
       
       
@@ -224,7 +205,7 @@
       <link href="/2022/01/01/howtowritesong/"/>
       <url>/2022/01/01/howtowritesong/</url>
       
-        <content type="html"><![CDATA[<h2 id="如何用和弦写一首歌"><a href="#如何用和弦写一首歌" class="headerlink" title="如何用和弦写一首歌"></a>如何用和弦写一首歌</h2><ul><li>今天就是想抒发一下情感</li></ul><ol><li><p>确定这首歌想表达什么氛围，讲述什么故事<br>找出几个或一个关键词，是困惑、厌恶、分手、喜欢的女孩&#x2F;男孩、糟糕的一天、嫉妒？。。。</p><ul><li>让这些关键词变成一个具体的话,写下来<br>天气清凉、空气干燥<br>最好的感觉<br>Ta 们对我一点都不了解<br>my first time crushing</li></ul></li><li><p>选一个当下符合自己故事&#x2F;心情的和弦进行</p><ul><li>乐器</li><li>没有乐器，或者不会乐器，可以试试<a href="https://chordchord.com/">chordchord 和弦网站</a><br>让 Ta 们循环起来<br>我喜欢，目前会的有 C→A→F→G</li></ul></li><li><p>旋律<br>在循环和弦进行的时候，唱一个音节出来，怕走调的话，可以先听听和弦里的每一个单音<br>这个哼唱自然延续，用你脑袋里想到的任何旋律、说话的声音。</p><ul><li>可以试着向上的旋律 ↑</li><li>可以是向下的 ↓</li><li>组合任何事物<br>录下来:D</li></ul></li><li><p>结构<br>一首歌常见，经久不衰的结构是<br>verse1→pre-chorus→chorus→verse2→pre-chorus→chorus</p></li><li><p>构建完整的歌词</p><ul><li>读诗歌</li><li>听觉得适合的歌单<br>一个词一个词地把它们写下来，experience–<br>copycat AKa 临摹</li></ul></li><li><p>用任何一个 DAW 软件录下来<br>发表到哔哩哔哩，网易云音乐、QQ 空间。。</p><blockquote><p>本文是对 Annie Dang 的视频的文字整理<br>录音 <a href="https://youtu.be/lOAETrx2pXk">https://youtu.be/lOAETrx2pXk</a><br>写歌 <a href="https://youtu.be/Q3lCmRzceg">https://youtu.be/Q3lCmRzceg</a></p></blockquote></li></ol>]]></content>
+        <content type="html"><![CDATA[<h2 id="如何用和弦写一首歌"><a href="#如何用和弦写一首歌" class="headerlink" title="如何用和弦写一首歌"></a>如何用和弦写一首歌</h2><ul><li>你今天想抒发一下情感</li></ul><ol><li><p>确定这首歌想表达什么氛围，讲述什么故事<br>找出几个或一个关键词，是困惑、厌恶、分手、喜欢的女孩&#x2F;男孩、糟糕的一天、嫉妒？。。。</p><ul><li>让这些关键词变成一个具体的话,写下来<br>天气清凉、空气干燥<br>最好的感觉<br>Ta 们对我一点都不了解<br>my first time crushing</li></ul></li><li><p>选一个当下符合自己故事&#x2F;心情的和弦进行</p><ul><li>乐器</li><li>没有乐器，或者不会乐器，可以试试<a href="https://chordchord.com/">chordchord 和弦网站</a><br>让 Ta 们循环起来<br>我喜欢，目前会的有 C→A→F→G</li></ul></li><li><p>旋律<br>在循环和弦进行的时候，唱一个音节出来，怕走调的话，可以先听听和弦里的每一个单音<br>这个哼唱自然延续，用你脑袋里想到的任何旋律、说话的声音。</p><ul><li>可以试着向上的旋律 ↑</li><li>可以是向下的 ↓</li><li>组合任何事物<br>录下来:D</li></ul></li><li><p>结构<br>一首歌常见，经久不衰的结构是<br>verse1→pre-chorus→chorus→verse2→pre-chorus→chorus</p></li><li><p>构建完整的歌词</p><ul><li>读诗歌</li><li>听觉得适合的歌单<br>一个词一个词地把它们写下来，experience–<br>copycat AKa 临摹</li></ul></li><li><p>用任何一个 DAW 软件录下来<br>发表到哔哩哔哩，网易云音乐、QQ 空间。。</p><blockquote><p>本文是对 Annie Dang 的视频的文字整理<br>录音 <a href="https://youtu.be/lOAETrx2pXk">https://youtu.be/lOAETrx2pXk</a><br>写歌 <a href="https://youtu.be/Q3lCmRzceg">https://youtu.be/Q3lCmRzceg</a></p></blockquote></li></ol>]]></content>
       
       
       
@@ -239,7 +220,7 @@
     
     
     <entry>
-      <title>web相关知识</title>
+      <title>web知识</title>
       <link href="/2021/12/15/webqs/"/>
       <url>/2021/12/15/webqs/</url>
       
@@ -290,16 +271,16 @@
     
     
     <entry>
-      <title>如何才能配置好express</title>
+      <title>如何配置express</title>
       <link href="/2021/11/26/expressnote/"/>
       <url>/2021/11/26/expressnote/</url>
       
-        <content type="html"><![CDATA[<h2 id="如何才能配置好-express"><a href="#如何才能配置好-express" class="headerlink" title="如何才能配置好 express"></a>如何才能配置好 express</h2><ol><li>安装 express 包<br><code>npm install express -g</code></li><li>创建 demo 项目<br><code>Express demo</code></li><li>进入 demo 项目<br><code>Cd demo</code></li><li>根据 pacakge.json 安装需要的东西<br><code>Npm i</code></li><li>安装脚手架(方便一点，可选)<br><code>npm install express -generator -g</code></li><li>启动脚手架<br><code>Npm start</code></li><li>输入 ip 地址和端口<br><a href="http://localhost:3000/">http://localhost:3000/</a></li><li>看到页面显示 Welcome to Express 几个大字就成功了</li></ol>]]></content>
+        <content type="html"><![CDATA[<h2 id="如何才能配置好-express"><a href="#如何才能配置好-express" class="headerlink" title="如何才能配置好 express"></a>如何才能配置好 express</h2><ol><li>安装 express 包<br><code>npm install express -g</code></li><li>创建 demo 项目<br><code>Express demo</code></li><li>进入 demo 项目<br><code>Cd demo</code></li><li>根据 pacakge.json 安装需要的东西<br><code>Npm i</code></li><li>安装脚手架(方便一点，可选)<br><code>npm install express -generator -g</code></li><li>启动脚手架<br><code>Npm start</code></li><li>输入 ip 地址和端口<br><a href="http://localhost:3000/">http://localhost:3000/</a></li><li>看到页面显示 Welcome to Express 几个大字就成功了</li></ol><p>​express 是一个开源的 node.js 项目框架，提供了一系列强大特性帮助你创建各种 Web 应用，和丰富的 HTTP 工具。使用 Express 可以快速地搭建一个完整功能的网站。<br><a href="https://www.expressjs.com.cn/">express 官网</a></p>]]></content>
       
       
       <categories>
           
-          <category> 教程 </category>
+          <category> 笔记 </category>
           
       </categories>
       
@@ -328,11 +309,11 @@
     
     
     <entry>
-      <title>git入门教程</title>
+      <title>git笔记</title>
       <link href="/2021/11/14/gitqs/"/>
       <url>/2021/11/14/gitqs/</url>
       
-        <content type="html"><![CDATA[<h2 id="git-入门教程"><a href="#git-入门教程" class="headerlink" title="git 入门教程"></a>git 入门教程</h2><ol><li><p>什么是 git<br>git 是管理代码版本的工具，是分布式版本控制系统即订可以保存我们每一次的修改记录。而 github 是放代码口中央服务器，类似的还有 gitee</p></li><li><p>Git 与 SVN 区别<br>1、Git 是分布式的，SVN 不是：这是 Git 和其它非分布式(分布式即版本库在自己电脑上)的版本控制系统，例如 SVN，CVS 等，最核心的区别。<br>2、Git 把内容按元数据方式存储，而 SVN 是按文件：所有的资源控制系统都是把文件的元信息隐藏在一个类似 .svn、.cvs 等的文件夹里。</p></li><li><p>如何创建 git 本地仓库并与远程仓库连接</p><ol><li>初始化本地仓库 <code>git init </code></li><li>设置邮箱和姓名要和远程仓库中的一致<br><code>git config --global user.email &quot;邮箱&quot;</code><br><code>git config --global user.name &quot;姓名&quot;</code></li><li>配置 SSH<code>ssh-keygen -t rsa -C &quot;邮箱名称&quot;</code></li><li>成功之后，打开 C:\Users\Administrator.ssh 目录下的 id_rsa.pub 文件复制文件内容</li><li>Gitee&#x2F;GitHub 官网登录 setting-&gt;SSH</li></ol></li></ol>]]></content>
+        <content type="html"><![CDATA[<h2 id="git-笔记"><a href="#git-笔记" class="headerlink" title="git 笔记"></a>git 笔记</h2><ol><li><p>什么是 git<br>git 是管理代码版本的工具，是分布式版本控制系统即订可以保存我们每一次的修改记录。而 github 是放代码口中央服务器，类似的还有 gitee</p></li><li><p>Git 与 SVN 区别<br>1、Git 是分布式的，SVN 不是：这是 Git 和其它非分布式(分布式即版本库在自己电脑上)的版本控制系统，例如 SVN，CVS 等，最核心的区别。<br>2、Git 把内容按元数据方式存储，而 SVN 是按文件：所有的资源控制系统都是把文件的元信息隐藏在一个类似 .svn、.cvs 等的文件夹里。</p></li><li><p>如何创建 git 本地仓库并与远程仓库连接</p><ol><li>初始化本地仓库 <code>git init </code></li><li>设置邮箱和姓名要和远程仓库中的一致<br><code>git config --global user.email &quot;邮箱&quot;</code><br><code>git config --global user.name &quot;姓名&quot;</code></li><li>配置 SSH<code>ssh-keygen -t rsa -C &quot;邮箱名称&quot;</code></li><li>成功之后，打开 C:\Users\Administrator.ssh 目录下的 id_rsa.pub 文件复制文件内容</li><li>Gitee&#x2F;GitHub 官网登录 setting-&gt;SSH</li></ol></li></ol>]]></content>
       
       
       <categories>
@@ -347,7 +328,7 @@
     
     
     <entry>
-      <title>css相关1</title>
+      <title>css笔记</title>
       <link href="/2021/11/14/cssqs1/"/>
       <url>/2021/11/14/cssqs1/</url>
       
@@ -474,25 +455,6 @@
     
     
     <entry>
-      <title>express是什么</title>
-      <link href="/2021/09/11/expressnote2/"/>
-      <url>/2021/09/11/expressnote2/</url>
-      
-        <content type="html"><![CDATA[<p>​ express 是一个开源的 node.js 项目框架，提供了一系列强大特性帮助你创建各种 Web 应用，和丰富的 HTTP 工具。使用 Express 可以快速地搭建一个完整功能的网站。<br><a href="https://www.expressjs.com.cn/">express 官网</a></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 网络知识 </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>express安装过程中出错</title>
       <link href="/2021/09/10/expressinstallfix/"/>
       <url>/2021/09/10/expressinstallfix/</url>
@@ -500,30 +462,18 @@
         <content type="html"><![CDATA[<h2 id="express-安装过程出错"><a href="#express-安装过程出错" class="headerlink" title="express 安装过程出错"></a>express 安装过程出错</h2><table><thead><tr><th>问题</th><th>找到的原因</th></tr></thead><tbody><tr><td>If you believe this might be a permissions issue,please double-check the</td><td>这个要用管理员权限打开 vscode</td></tr><tr><td>npm start npm ERR! Missing script: “start”</td><td>这个是我们刚刚创建了一个 express 文件 但是我们没有进入该文件 cd demo</td></tr><tr><td>Error: Cannot find module ‘cookie-parser’Require stack:</td><td>重新创建一个就没有问题了</td></tr></tbody></table>]]></content>
       
       
-      <categories>
-          
-          <category> 找错trust me </category>
-          
-      </categories>
-      
       
     </entry>
     
     
     
     <entry>
-      <title>编程单词</title>
+      <title>编程英语</title>
       <link href="/2021/09/02/codewords/"/>
       <url>/2021/09/02/codewords/</url>
       
         <content type="html"><![CDATA[<h2 id="编程单词"><a href="#编程单词" class="headerlink" title="编程单词"></a>编程单词</h2><table><thead><tr><th>单词</th></tr></thead><tbody><tr><td>Token 令牌，标记</td></tr><tr><td>property 属性，{对象}里面的东西</td></tr><tr><td>Assign to ：给赋值，布置</td></tr><tr><td>mount 网络挂载；安装；挂接</td></tr><tr><td>proxy 网络代理伺服器；代理服务器；代理模式</td></tr><tr><td>ui user interface 的意思</td></tr><tr><td>modify 修改的；修正</td></tr><tr><td>import 导入数据</td></tr><tr><td>export 输出其它格式文件</td></tr><tr><td>component 组件；元件；构件</td></tr><tr><td>ui user interface 的意思</td></tr><tr><td>router 无线路由器</td></tr></tbody></table>]]></content>
       
-      
-      <categories>
-          
-          <category> 编程单词 </category>
-          
-      </categories>
       
       
     </entry>
@@ -535,7 +485,7 @@
       <link href="/2020/11/09/emogirl/"/>
       <url>/2020/11/09/emogirl/</url>
       
-        <content type="html"><![CDATA[<h1 id="这是我的第一文章"><a href="#这是我的第一文章" class="headerlink" title="这是我的第一文章"></a>这是我的第一文章</h1><h2 id="喜欢的摇滚歌曲"><a href="#喜欢的摇滚歌曲" class="headerlink" title="喜欢的摇滚歌曲"></a>喜欢的摇滚歌曲</h2><p>歌曲<a href="https://www.bilibili.com/video/BV17u41197bS/?share_source=copy_web&vd_source=813b0cfea1023c3f2aca017db97a712c">emo girl</a></p>]]></content>
+        <content type="html"><![CDATA[<h1 id="这是我的第一文章"><a href="#这是我的第一文章" class="headerlink" title="这是我的第一文章"></a>这是我的第一文章</h1><p>歌曲<a href="https://www.bilibili.com/video/BV17u41197bS/?share_source=copy_web&vd_source=813b0cfea1023c3f2aca017db97a712c">emo girl</a></p>]]></content>
       
       
       
