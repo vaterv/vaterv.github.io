@@ -4,26 +4,7 @@
   
     
     <entry>
-      <title>Mike机试</title>
-      <link href="/2022/11/23/machinetest1/"/>
-      <url>/2022/11/23/machinetest1/</url>
-      
-        <content type="html"><![CDATA[<h2 id="某表单公司机试题"><a href="#某表单公司机试题" class="headerlink" title="某表单公司机试题"></a>某表单公司机试题</h2><h2 id="1-数据排序"><a href="#1-数据排序" class="headerlink" title="1.数据排序"></a>1.数据排序</h2><p>假设有如下字符串“A12”，其中“A”表示数据类型(A-Z) ，“12”表示数据序号(0-9) 。现在需要对一组数据先按照数据序号再按照数据类型进行排序。<br>例如: [“B3”,”D2”,”F1”,”A9”,”D12”,”A2”,”C1”,”Z0’”,”B1”]&#x3D;&gt;[“Z0”,”B1”,”C1”,”F1”,”A2”,”D2”,”B3”,”A9”,”D12”]</p><p>我的答案</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var unorderData = [&quot;B3&quot;, &quot;D2&quot;, &quot;F1&quot;, &quot;A9&quot;, &quot;D12&quot;, &quot;A2&quot;, &quot;C1&quot;, &quot;Z0&quot;, &quot;B1&quot;];</span><br><span class="line">// 排序结果</span><br><span class="line">var orderedData = unorderData.sort().sort(function (a, b) &#123;</span><br><span class="line">  return a.slice(1) - b.slice(1);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="2-局部页面实现（必答题）"><a href="#2-局部页面实现（必答题）" class="headerlink" title="2. 局部页面实现（必答题）"></a>2. 局部页面实现（必答题）</h2><p>页面设计图：点此查看<a href="https://www.figma.com/file/TpilpjXkaDUOw6sm1EogqP/%E5%89%8D%E7%AB%AF%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80?node-id=0:1&t=ueel6JWr5T0P2UZK-0">设计图</a><br>请实现以上设计图中的页面内容。要求：</p><ol><li>一比一还原设计图</li><li>不可以使用 table</li><li>最小支持页面宽度为：1024px</li></ol><ul><li>使用了 flex 嵌套布局实现表单样式，justify-content 实现一行 item 在水平方向的对齐；align-item 实现一列 item 在竖直方向上的对齐。</li><li>class 类 CSS 样式复用</li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> 面试相关 </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>面试整理</title>
+      <title>JS题目</title>
       <link href="/2022/11/18/interviewqs2/"/>
       <url>/2022/11/18/interviewqs2/</url>
       
@@ -33,25 +14,6 @@
       <categories>
           
           <category> 面试 </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>VUE面试题相关1</title>
-      <link href="/2022/10/08/vueqs/"/>
-      <url>/2022/10/08/vueqs/</url>
-      
-        <content type="html"><![CDATA[<h1 id="VUE-面试题相关-1"><a href="#VUE-面试题相关-1" class="headerlink" title="VUE 面试题相关 1"></a>VUE 面试题相关 1</h1><h2 id="1-什么是-MVVM-模式"><a href="#1-什么是-MVVM-模式" class="headerlink" title="1.什么是 MVVM 模式"></a>1.什么是 MVVM 模式</h2><p>MVVM 是 Model、view、view-model 的缩写。</p><ul><li>Model 代表数据层，用于存储数据和对数据进行增删改查</li><li>view 代表视图层，即 UI 界面，用于将数据模型转化成 UI 展现出来</li><li>view-model 通过双向数据连接前两者。当 Model 数据改变时通过它改 View 变视图层;反之 View 视图层改变时通过它改变 Model 数据层</li></ul><h2 id="2-双向数据绑定的原理"><a href="#2-双向数据绑定的原理" class="headerlink" title="2.双向数据绑定的原理"></a>2.双向数据绑定的原理</h2><p>Vue 数据双向绑定原理是通过<strong>数据劫持</strong>结合<strong>发布者-订阅者</strong>模式的方式来实现的。首先对数据进行<strong>监听</strong>，然后当监听的属性发生变化时则告诉<strong>订阅者</strong>是否要更新，若更新就会执行对应的<strong>更新函数</strong>从而更新视图</p><h2 id="3-数据劫持的原理"><a href="#3-数据劫持的原理" class="headerlink" title="3.数据劫持的原理"></a>3.数据劫持的原理</h2><p>通过“Object.defineProperty()”方法来劫持各个属性的 setter，getter，在数据变动时发布消息给订阅者，触发相应的监听回调,来更新函数</p><h2 id="4-vue-和-react-的区别？"><a href="#4-vue-和-react-的区别？" class="headerlink" title="4.vue 和 react 的区别？"></a>4.vue 和 react 的区别？</h2><ol><li><p><strong>组件写法差异</strong></p><ul><li>React 推荐的做法是 JSX + inline style, 也就是把 HTML 和 CSS 全都写进 JavaScript 中,即 all in js</li><li>Vue 推荐的做法是 template 的单文件组件格式(简单易懂，从传统前端转过来易于理解),即 html,css,JS 写在同一个文件(vue 也支持 JSX 写法)</li></ul></li><li><p><strong>diff 算法不同</strong></p><ul><li>Vue2 的核心 Diff 算法采用了双端比较的算法，同时从新旧 children 的两端开始进行比较，借助 key 值找到可复用的节点，再进行相关操作。</li><li>React 的 Diff 算法，是传统 Diff 算法循环递归每一个节点。同样情况下可以 Vue 的 diff 算法减少移动节点次数，减少不必要的性能损耗</li></ul></li><li><p><strong>响应式原理不同</strong></p><ul><li>Vue 自动优化，数据可变。当数据改变时，自动找到引用组件重新渲染</li><li>React 基于状态机，手动优化，数据不可变，需要 setState 驱动新的 state 替换老的 state</li></ul></li></ol>]]></content>
-      
-      
-      <categories>
-          
-          <category> 面试相关 </category>
           
       </categories>
       
@@ -80,11 +42,11 @@
     
     
     <entry>
-      <title>javascript常见问题</title>
+      <title>javascript知识</title>
       <link href="/2022/10/02/jsqs/"/>
       <url>/2022/10/02/jsqs/</url>
       
-        <content type="html"><![CDATA[<h2 id="js-面试相关"><a href="#js-面试相关" class="headerlink" title="js 面试相关"></a>js 面试相关</h2><ul><li>背景<br>在 JavaScript 中是使用构造函数来新建一个对象的，每一个构造函数的内部都有一个 prototype 属性，它的属性值是一个对象，这个对象包含了可以由该构造函数的所有实例共享的属性和方法。</li></ul><ol><li>什么是构造函数</li></ol><p>是用 new 关键字创建，并且首字母大写，本质上也是个函数,例如<br><code>var obj = new Person(&#39;enfp&#39;，18);</code></p><ol start="2"><li><p>什么是原型<br>当使用构造函数新建一个对象后，在这个对象的内部将包含一个指针，这个指针指向构造函数的 prototype 属性对应的值，在 ES5 中这个指针被称为对象的原型。</p></li><li><p>什么是原型链<br>当访问一个对象的属性时，如果这个对象内部不存在这个属性，那么它就会去它的原型对象里找这个属性，这个原型对象又会有自己的原型，于是就这样一直找下去，也就是原型链的概念。原型对象可能也拥有原型,并从中继承方法和属性，一层一层，以此类推，这种关系被称为原型链。</p></li><li><p>什么是作用域<br>能在一定空间里可以对数据进行读写操作，这个空间就是数据的作用域。</p></li><li><p>什么是作用域链<br>当在 js 中使用一个变量的时候，js 会在当前作用域下寻找该变量，如果没找都，它回到它的上层作用域寻找，直到找到该变量或或者是找到全局作用域。</p></li><li><p>什么是闭包<br>闭包可以让你在内层函数中访问到外层函数的 作用域。<br>就是函数变量跨过自己的作用域，用上级作用域的变量的行为。</p></li><li><p>ES6 有哪些新特性</p><table><thead><tr><th>编号</th><th>内容</th></tr></thead><tbody><tr><td>1</td><td>ES6 新增一种数据类型 symbol</td></tr><tr><td>2</td><td>新增两个声明变量的关键字 let const.它们不会在预编译中有提升行为</td></tr><tr><td>3</td><td>解构赋值，let [a,b,c]&#x3D;[1,2,3]像这样是对赋值运算符的拓展</td></tr><tr><td>4</td><td>新增了箭头函数，解决了函数关键字声明的麻烦</td></tr></tbody></table></li><li><p>什么是回调地狱<br>常常第一个的函数的输出是第二个函数的输入这种现象</p></li><li><p>什么是 promise<br>是异步编程的解决方案，有三种状态 pending(等待态)、fulfiled（成功态）、reject(失败态)用来解决回调地狱，解决异步问题</p></li><li><p>怎么使用 promise<br>Promise 类有 .then() .catch() 和 .finally() 三个方法，这三个方法的参数都是一个函数<br>在自己手写后台时匹配数据库时，根据数据库 有没有报错给它选择 then 还是 catch</p></li><li><p>什么是 Promise.all?<br>Promise.all(promisesArrayOrIterable) 帮助我们一次，并行处理多个 promise, 然后将结果聚合到一个数组里边，这是聚合结果，不是说返回结果哦。<br>如果所有 promise 都成功解析，Promise.all() 会将每个 promise 的已完成值 聚合 到数组。我们可以按照原来参数中每一个 promise 的顺序，获取到他们对应的完成值。<br>如果有其中一个 promise 被拒绝，那么 Promise.all() 会以同样的原因立即拒绝（不等待其他 Promise 解决）。</p></li><li><p>什么是冒泡事件？<br>事件会向这个对象的的父级传播，从里到外，直至它被处理</p></li><li><p>什么是事件委托&#x2F;事件代理？<br>事件委托就是把原本需要绑定在子元素上的事件（onclick、onkeydown 等）委托给它的父元素，让父元素来监听子元素的冒泡事件</p></li><li><p>为什么 0.1+0.2 不等于 0.3<br>因为计算机运行过程中，需要将数据转化成二进制，然后再进行计算。js 中的 Number 类型遵循 IEEE754 标准，在 IEEE754 标准的 64 位浮点数相加，因为浮点数自身小数位数的限制而截断的二进制在转化为十进制，就变成 0.30000000000000004，所以在计算时会产生误差。</p></li></ol>]]></content>
+        <content type="html"><![CDATA[<ul><li>背景<br>在 JavaScript 中是使用构造函数来新建一个对象的，每一个构造函数的内部都有一个 prototype 属性，它的属性值是一个对象，这个对象包含了可以由该构造函数的所有实例共享的属性和方法。</li></ul><ol><li>什么是构造函数</li></ol><p>是用 new 关键字创建，并且首字母大写，本质上也是个函数,例如<br><code>var obj = new Person(&#39;enfp&#39;，18);</code></p><ol start="2"><li><p>什么是原型<br>当使用构造函数新建一个对象后，在这个对象的内部将包含一个指针，这个指针指向构造函数的 prototype 属性对应的值，在 ES5 中这个指针被称为对象的原型。</p></li><li><p>什么是原型链<br>当访问一个对象的属性时，如果这个对象内部不存在这个属性，那么它就会去它的原型对象里找这个属性，这个原型对象又会有自己的原型，于是就这样一直找下去，也就是原型链的概念。原型对象可能也拥有原型,并从中继承方法和属性，一层一层，以此类推，这种关系被称为原型链。</p></li><li><p>什么是作用域<br>能在一定空间里可以对数据进行读写操作，这个空间就是数据的作用域。</p></li><li><p>什么是作用域链<br>当在 js 中使用一个变量的时候，js 会在当前作用域下寻找该变量，如果没找都，它回到它的上层作用域寻找，直到找到该变量或或者是找到全局作用域。</p></li><li><p>什么是闭包<br>闭包可以让你在内层函数中访问到外层函数的 作用域。<br>就是函数变量跨过自己的作用域，用上级作用域的变量的行为。</p></li><li><p>ES6 有哪些新特性</p><table><thead><tr><th>编号</th><th>内容</th></tr></thead><tbody><tr><td>1</td><td>ES6 新增一种数据类型 symbol</td></tr><tr><td>2</td><td>新增两个声明变量的关键字 let const.它们不会在预编译中有提升行为</td></tr><tr><td>3</td><td>解构赋值，let [a,b,c]&#x3D;[1,2,3]像这样是对赋值运算符的拓展</td></tr><tr><td>4</td><td>新增了箭头函数，解决了函数关键字声明的麻烦</td></tr></tbody></table></li><li><p>什么是回调地狱<br>常常第一个的函数的输出是第二个函数的输入这种现象</p></li><li><p>什么是 promise<br>是异步编程的解决方案，有三种状态 pending(等待态)、fulfiled（成功态）、reject(失败态)用来解决回调地狱，解决异步问题</p></li><li><p>怎么使用 promise<br>Promise 类有 .then() .catch() 和 .finally() 三个方法，这三个方法的参数都是一个函数<br>在自己手写后台时匹配数据库时，根据数据库 有没有报错给它选择 then 还是 catch</p></li><li><p>什么是 Promise.all?<br>Promise.all(promisesArrayOrIterable) 帮助我们一次，并行处理多个 promise, 然后将结果聚合到一个数组里边，这是聚合结果，不是说返回结果哦。<br>如果所有 promise 都成功解析，Promise.all() 会将每个 promise 的已完成值 聚合 到数组。我们可以按照原来参数中每一个 promise 的顺序，获取到他们对应的完成值。<br>如果有其中一个 promise 被拒绝，那么 Promise.all() 会以同样的原因立即拒绝（不等待其他 Promise 解决）。</p></li><li><p>什么是冒泡事件？<br>事件会向这个对象的的父级传播，从里到外，直至它被处理</p></li><li><p>什么是事件委托&#x2F;事件代理？<br>事件委托就是把原本需要绑定在子元素上的事件（onclick、onkeydown 等）委托给它的父元素，让父元素来监听子元素的冒泡事件</p></li><li><p>为什么 0.1+0.2 不等于 0.3<br>因为计算机运行过程中，需要将数据转化成二进制，然后再进行计算。js 中的 Number 类型遵循 IEEE754 标准，在 IEEE754 标准的 64 位浮点数相加，因为浮点数自身小数位数的限制而截断的二进制在转化为十进制，就变成 0.30000000000000004，所以在计算时会产生误差。</p></li></ol>]]></content>
       
       
       <categories>
@@ -104,6 +66,19 @@
       <url>/2022/09/10/mapqs/</url>
       
         <content type="html"><![CDATA[<h2 id="vue-项目中使用百度地图接口"><a href="#vue-项目中使用百度地图接口" class="headerlink" title="vue 项目中使用百度地图接口"></a>vue 项目中使用百度地图接口</h2><ol><li>注册百度地图的开发者帐号并拿到密钥</li><li>简单应用地图<br>引入<br><code>&lt;script type=&quot;text/javascript&quot; src=&quot;https://api.map.baidu.com/api?v=1.0&amp;type=webgl&amp;ak=您的密钥&quot;&gt;</code></li></ol><p>创建地图实例</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var map = new BMapGL.Map(&quot;container&quot;);// 创建地图实例</span><br><span class="line">   var point = new BMapGL.Point(116.404, 39.915);// 创建点坐标</span><br><span class="line">   map.centerAndZoom(point, 15);// 初始化地图，设置中心点坐标和地图级别</span><br></pre></td></tr></table></figure><blockquote><p>参考 <a href="https://blog.csdn.net/TeAmo__/article/details/123901089">https://blog.csdn.net/TeAmo__/article/details/123901089</a></p></blockquote>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JS问题2</title>
+      <link href="/2022/05/23/machinetest1/"/>
+      <url>/2022/05/23/machinetest1/</url>
+      
+        <content type="html"><![CDATA[<h2 id="某表单公司机试题"><a href="#某表单公司机试题" class="headerlink" title="某表单公司机试题"></a>某表单公司机试题</h2><h2 id="1-数据排序"><a href="#1-数据排序" class="headerlink" title="1.数据排序"></a>1.数据排序</h2><p>假设有如下字符串“A12”，其中“A”表示数据类型(A-Z) ，“12”表示数据序号(0-9) 。现在需要对一组数据先按照数据序号再按照数据类型进行排序。<br>例如: [“B3”,”D2”,”F1”,”A9”,”D12”,”A2”,”C1”,”Z0’”,”B1”]&#x3D;&gt;[“Z0”,”B1”,”C1”,”F1”,”A2”,”D2”,”B3”,”A9”,”D12”]</p><p>我的答案</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var unorderData = [&quot;B3&quot;, &quot;D2&quot;, &quot;F1&quot;, &quot;A9&quot;, &quot;D12&quot;, &quot;A2&quot;, &quot;C1&quot;, &quot;Z0&quot;, &quot;B1&quot;];</span><br><span class="line">// 排序结果</span><br><span class="line">var orderedData = unorderData.sort().sort(function (a, b) &#123;</span><br><span class="line">  return a.slice(1) - b.slice(1);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="2-局部页面实现（必答题）"><a href="#2-局部页面实现（必答题）" class="headerlink" title="2. 局部页面实现（必答题）"></a>2. 局部页面实现（必答题）</h2><p>页面设计图：点此查看<a href="https://www.figma.com/file/TpilpjXkaDUOw6sm1EogqP/%E5%89%8D%E7%AB%AF%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80?node-id=0:1&t=ueel6JWr5T0P2UZK-0">设计图</a><br>请实现以上设计图中的页面内容。要求：</p><ol><li>一比一还原设计图</li><li>不可以使用 table</li><li>最小支持页面宽度为：1024px</li></ol><ul><li>使用了 flex 嵌套布局实现表单样式，justify-content 实现一行 item 在水平方向的对齐；align-item 实现一列 item 在竖直方向上的对齐。</li><li>class 类 CSS 样式复用</li></ul>]]></content>
       
       
       
@@ -239,7 +214,7 @@
     
     
     <entry>
-      <title>vue知识2</title>
+      <title>vue知识</title>
       <link href="/2021/12/15/vueqs3/"/>
       <url>/2021/12/15/vueqs3/</url>
       
@@ -328,7 +303,7 @@
     
     
     <entry>
-      <title>css笔记</title>
+      <title>css新增特性</title>
       <link href="/2021/11/14/cssqs1/"/>
       <url>/2021/11/14/cssqs1/</url>
       
@@ -473,6 +448,19 @@
       <url>/2021/09/02/codewords/</url>
       
         <content type="html"><![CDATA[<h2 id="编程单词"><a href="#编程单词" class="headerlink" title="编程单词"></a>编程单词</h2><table><thead><tr><th>单词</th></tr></thead><tbody><tr><td>Token 令牌，标记</td></tr><tr><td>property 属性，{对象}里面的东西</td></tr><tr><td>Assign to ：给赋值，布置</td></tr><tr><td>mount 网络挂载；安装；挂接</td></tr><tr><td>proxy 网络代理伺服器；代理服务器；代理模式</td></tr><tr><td>ui user interface 的意思</td></tr><tr><td>modify 修改的；修正</td></tr><tr><td>import 导入数据</td></tr><tr><td>export 输出其它格式文件</td></tr><tr><td>component 组件；元件；构件</td></tr><tr><td>ui user interface 的意思</td></tr><tr><td>router 无线路由器</td></tr></tbody></table>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>VUE知识2</title>
+      <link href="/2021/08/08/vueqs/"/>
+      <url>/2021/08/08/vueqs/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-什么是-MVVM-模式"><a href="#1-什么是-MVVM-模式" class="headerlink" title="1.什么是 MVVM 模式"></a>1.什么是 MVVM 模式</h2><p>MVVM 是 Model、view、view-model 的缩写。</p><ul><li>Model 代表数据层，用于存储数据和对数据进行增删改查</li><li>view 代表视图层，即 UI 界面，用于将数据模型转化成 UI 展现出来</li><li>view-model 通过双向数据连接前两者。当 Model 数据改变时通过它改 View 变视图层;反之 View 视图层改变时通过它改变 Model 数据层</li></ul><h2 id="2-双向数据绑定的原理"><a href="#2-双向数据绑定的原理" class="headerlink" title="2.双向数据绑定的原理"></a>2.双向数据绑定的原理</h2><p>Vue 数据双向绑定原理是通过<strong>数据劫持</strong>结合<strong>发布者-订阅者</strong>模式的方式来实现的。首先对数据进行<strong>监听</strong>，然后当监听的属性发生变化时则告诉<strong>订阅者</strong>是否要更新，若更新就会执行对应的<strong>更新函数</strong>从而更新视图</p><h2 id="3-数据劫持的原理"><a href="#3-数据劫持的原理" class="headerlink" title="3.数据劫持的原理"></a>3.数据劫持的原理</h2><p>通过“Object.defineProperty()”方法来劫持各个属性的 setter，getter，在数据变动时发布消息给订阅者，触发相应的监听回调,来更新函数</p><h2 id="4-vue-和-react-的区别？"><a href="#4-vue-和-react-的区别？" class="headerlink" title="4.vue 和 react 的区别？"></a>4.vue 和 react 的区别？</h2><ol><li><p><strong>组件写法差异</strong></p><ul><li>React 推荐的做法是 JSX + inline style, 也就是把 HTML 和 CSS 全都写进 JavaScript 中,即 all in js</li><li>Vue 推荐的做法是 template 的单文件组件格式(简单易懂，从传统前端转过来易于理解),即 html,css,JS 写在同一个文件(vue 也支持 JSX 写法)</li></ul></li><li><p><strong>diff 算法不同</strong></p><ul><li>Vue2 的核心 Diff 算法采用了双端比较的算法，同时从新旧 children 的两端开始进行比较，借助 key 值找到可复用的节点，再进行相关操作。</li><li>React 的 Diff 算法，是传统 Diff 算法循环递归每一个节点。同样情况下可以 Vue 的 diff 算法减少移动节点次数，减少不必要的性能损耗</li></ul></li><li><p><strong>响应式原理不同</strong></p><ul><li>Vue 自动优化，数据可变。当数据改变时，自动找到引用组件重新渲染</li><li>React 基于状态机，手动优化，数据不可变，需要 setState 驱动新的 state 替换老的 state</li></ul></li></ol>]]></content>
       
       
       
