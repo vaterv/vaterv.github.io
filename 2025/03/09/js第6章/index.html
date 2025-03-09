@@ -1,0 +1,185 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Rain on me | Rain on me</title><meta name="author" content="彭雨晴"><meta name="copyright" content="彭雨晴"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="第 6 章创建 Object显式地创建 Object 的实例有两种方式。  使用 new 操作符， Object 构造函数  person 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051person.name &#x3D; &quot;Nicholas&quot;;&#96;&#96;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Rain on me">
+<meta property="og:url" content="http://vaterv.github.io/2025/03/09/js%E7%AC%AC6%E7%AB%A0/index.html">
+<meta property="og:site_name" content="Rain on me">
+<meta property="og:description" content="第 6 章创建 Object显式地创建 Object 的实例有两种方式。  使用 new 操作符， Object 构造函数  person 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051person.name &#x3D; &quot;Nicholas&quot;;&#96;&#96;">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://wallpaperaccess.com/full/771415.jpg">
+<meta property="article:published_time" content="2025-03-09T06:53:30.285Z">
+<meta property="article:modified_time" content="2023-03-07T11:33:44.000Z">
+<meta property="article:author" content="彭雨晴">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://wallpaperaccess.com/full/771415.jpg"><link rel="shortcut icon" href="/img/trees.png"><link rel="canonical" href="http://vaterv.github.io/2025/03/09/js%E7%AC%AC6%E7%AB%A0/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Rain on me',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-03-07 19:33:44'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://media0.giphy.com/media/TF9yp6VhVIUdSehrRp/giphy.gif?cid=ecf05e478hop2jmmqez6xrjzqy5j0585yhtgmk9iz67exp26&amp;rid=giphy.gif&amp;ct=g" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">43</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间线</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 书籍</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://wallpaperaccess.com/full/771415.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Rain on me</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间线</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 书籍</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">无题</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-03-09T06:53:30.285Z" title="发表于 2025-03-09 14:53:30">2025-03-09</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-03-07T11:33:44.000Z" title="更新于 2023-03-07 19:33:44">2023-03-07</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.1k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h3 id="第-6-章"><a href="#第-6-章" class="headerlink" title="第 6 章"></a>第 6 章</h3><h4 id="创建-Object"><a href="#创建-Object" class="headerlink" title="创建 Object"></a>创建 Object</h4><p>显式地创建 Object 的实例有两种方式。</p>
+<ol>
+<li>使用 new 操作符， Object 构造函数</li>
+</ol>
+<figure class="highlight plaintext"><figcaption><span>person </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">person.name = &quot;Nicholas&quot;;```</span><br><span class="line">2. 对象字面量（object literal）[字面意思]</span><br><span class="line">```let person = &#123;</span><br><span class="line">&quot;name&quot;: &quot;Nicholas&quot;,</span><br><span class="line">&quot;age&quot;: 29</span><br><span class="line">&#125;;```</span><br><span class="line"></span><br><span class="line">#### 创建数组</span><br><span class="line">1. 使用 Array 构造函数，比如：let colors = new Array();</span><br><span class="line">2. 数组字面量（array literal）表示法</span><br><span class="line">let colors = [&quot;red&quot;, &quot;blue&quot;, &quot;green&quot;]; // 创建一个包含 3 个元素的数组</span><br><span class="line">Array.from() 的第一个参数是一个类数组对象</span><br><span class="line">```// 字符串会被拆分为单字符数组</span><br><span class="line">console.log(Array.from(&quot;Matt&quot;)); // [&quot;M&quot;, &quot;a&quot;, &quot;t&quot;, &quot;t&quot;]```</span><br><span class="line">判断一个对象是不是数组。:</span><br><span class="line">```if (value instanceof Array)&#123;</span><br><span class="line">// 操作数组</span><br><span class="line">&#125;```</span><br><span class="line"></span><br><span class="line"> Array.isArray() 方法</span><br><span class="line">```if (Array.isArray(value))&#123;</span><br><span class="line">// 操作数组</span><br><span class="line">&#125;```</span><br><span class="line"></span><br><span class="line"> fill() 方法可以向数组填充指定的值</span><br><span class="line"> ```const zeroes = [0, 0, 0, 0, 0];</span><br><span class="line">// 用 5 填充整个数组</span><br><span class="line">zeroes.fill(5);</span><br><span class="line">console.log(zeroes); // [5, 5, 5, 5, 5]</span><br><span class="line">zeroes.fill(0); // 重置```</span><br><span class="line"></span><br><span class="line"> toString() 方法，以得到最终的字符串</span><br><span class="line">```let colors = [&quot;red&quot;, &quot;blue&quot;, &quot;green&quot;]; // 创建一个包含 3 个字符串的数组</span><br><span class="line">alert(colors.toString()); // red,blue,green```</span><br><span class="line"></span><br><span class="line">- ECMAScript 数组提供了 push() 和 pop() 方法，以实现类似栈的行为。</span><br><span class="line">push() 方法接收任意数量的参数，并将它们添加到数组末尾，返回数组的最新长度。</span><br><span class="line"> pop() 方法则</span><br><span class="line">用于删除数组的最后一项，同时减少数组的 length 值，返回被删除的项。来看下面的例子：</span><br><span class="line">```let colors = new Array(); // 创建一个数组</span><br><span class="line">let count = colors.push(&quot;red&quot;, &quot;green&quot;); // 推入两项</span><br><span class="line">alert(count); // 2</span><br><span class="line">count = colors.push(&quot;black&quot;); // 再推入一项</span><br><span class="line">alert(count); // 3</span><br><span class="line">let item = colors.pop(); // 取得最后一项</span><br><span class="line">alert(item); // black```</span><br><span class="line">- 队列方法</span><br><span class="line">就像栈是以 LIFO 形式限制访问的数据结构一样，队列以先进先出（FIFO，First-In-First-Out）形式</span><br><span class="line">限制访问。</span><br><span class="line">shift() ，它会删除数</span><br><span class="line">组的第一项并返回它，然后数组长度减 1。</span><br></pre></td></tr></table></figure>
+
+<p>let count &#x3D; colors.push(“red”, “green”); &#x2F;&#x2F; 推入两项<br>alert(count); &#x2F;&#x2F; 2<br>count &#x3D; colors.push(“black”); &#x2F;&#x2F; 再推入一项<br>alert(count); &#x2F;&#x2F; 3<br>let item &#x3D; colors.shift(); &#x2F;&#x2F; 取得第一项<br>alert(item); &#x2F;&#x2F; red</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">indexOf() 和 lastIndexOf() 都返回要查找的元素在数组中的位置，如果没找到则返回1。</span><br><span class="line">```let numbers = [1, 2, 3, 4, 5, 4, 3, 2, 1];</span><br><span class="line">alert(numbers.indexOf(4)); // 3</span><br><span class="line">alert(numbers.lastIndexOf(4)); // 5</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>迭代方法</li>
+</ul>
+<figure class="highlight plaintext"><figcaption><span>numbers </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">let filterResult = numbers.filter((item, index, array) =&gt; item &gt; 2);</span><br><span class="line">alert(filterResult); // 3,4,5,4,3```</span><br><span class="line"> map方法非常适合创建一个与原</span><br><span class="line">始数组元素一一对应的新数组。</span><br><span class="line">```let numbers = [1, 2, 3, 4, 5, 4, 3, 2, 1];</span><br><span class="line">let mapResult = numbers.map((item, index, array) =&gt; item * 2);</span><br><span class="line">alert(mapResult); // 2,4,6,8,10,8,6,4,2</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>归并方法<br>这两个方法都会迭代数<br>组的所有项，并在此基础上构建一个最终返回值。</li>
+</ul>
+<p>可以使用 reduce() 函数执行累加数组中所有数值的操作，比如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let values = [1, 2, 3, 4, 5];</span><br><span class="line">let sum = values.reduce((prev, cur, index, array) =&gt; prev + cur);</span><br><span class="line">alert(sum); // 15</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>webGl<br>有了它，开发者就能够编写涉及复杂图形的应用程序</li>
+</ul>
+<h4 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h4><p>与 Object 只能使用数值、字符串或符号作为键不同， Map 可以使用任何 JavaScript 数据类型作为<br>键。<br>使用 new 关键字和 Map 构造函数可以创建一个空映射：<br>const m &#x3D; new Map();</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/ 使用嵌套数组初始化映射</span><br><span class="line">const m1 = new Map([</span><br><span class="line">[&quot;key1&quot;, &quot;val1&quot;],</span><br><span class="line">[&quot;key2&quot;, &quot;val2&quot;],</span><br><span class="line">[&quot;key3&quot;, &quot;val3&quot;]</span><br><span class="line">]);</span><br><span class="line">alert(m1.size); // 3</span><br></pre></td></tr></table></figure>
+
+<p>初始化之后，可以使用 set() 方法再添加键&#x2F;值对。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const m = new Map().set(&quot;key1&quot;, &quot;val1&quot;);</span><br><span class="line">m.set(&quot;key2&quot;, &quot;val2&quot;)</span><br><span class="line">.set(&quot;key3&quot;, &quot;val3&quot;);</span><br><span class="line">alert(m.size); // 3</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const m = new Map();</span><br><span class="line">const symbolKey = Symbol();</span><br><span class="line"></span><br><span class="line">m.set(symbolKey, &quot;symbolValue&quot;);</span><br><span class="line">alert(m.get(symbolKey)); // symbolValue</span><br></pre></td></tr></table></figure>
+
+<p>从大型 Object 和 Map 中查找键&#x2F;值对的性能差异极小，但如果只包含少量键&#x2F;值对，<br>则 Object 有时候速度更快。</p>
+<h5 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h5><p>ECMAScript 6 新增的 Set 是一种新集合类型，为这门语言带来集合数据结构<br>使用 new 关键字和 Set 构造函数可以创建一个空集合：<br>const m &#x3D; new Set();</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// 使用数组初始化集合</span><br><span class="line">const s1 = new Set([&quot;val1&quot;, &quot;val2&quot;, &quot;val3&quot;]);</span><br><span class="line">alert(s1.size); // 3</span><br></pre></td></tr></table></figure>
+
+<p>初始化之后，可以使用 add() 增加值，使用 has() 查询，通过 size 取得元素数量，以及使用 delete()<br>和 clear() 删除元素：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const s = new Set();</span><br><span class="line">alert(s.has(&quot;Matt&quot;)); // false</span><br><span class="line">alert(s.size); // 0</span><br><span class="line">s.add(&quot;Matt&quot;)</span><br><span class="line">.add(&quot;Frisbie&quot;);</span><br></pre></td></tr></table></figure>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://vaterv.github.io">彭雨晴</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://vaterv.github.io/2025/03/09/js%E7%AC%AC6%E7%AB%A0/">http://vaterv.github.io/2025/03/09/js%E7%AC%AC6%E7%AB%A0/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://vaterv.github.io" target="_blank">Rain on me</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://wallpaperaccess.com/full/771415.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2025/03/09/js%E7%AC%AC7%E7%AB%A0/"><img class="prev-cover" src="https://wallpaperaccess.com/full/1571180.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info"></div></div></a></div><div class="next-post pull-right"><a href="/2025/03/09/js%E7%AC%AC5%E7%AB%A0/"><img class="next-cover" src="https://wallpaperaccess.com/full/771415.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info"></div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://media0.giphy.com/media/TF9yp6VhVIUdSehrRp/giphy.gif?cid=ecf05e478hop2jmmqez6xrjzqy5j0585yhtgmk9iz67exp26&amp;rid=giphy.gif&amp;ct=g" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">彭雨晴</div><div class="author-info__description">YOU NEVER WALK ALONE</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">43</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/vaterv"><i class="fab fa-github"></i><span>关注我</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/vaterv" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:1587549557@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC-6-%E7%AB%A0"><span class="toc-number">1.</span> <span class="toc-text">第 6 章</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA-Object"><span class="toc-number">1.1.</span> <span class="toc-text">创建 Object</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Map"><span class="toc-number">1.2.</span> <span class="toc-text">Map</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Set"><span class="toc-number">1.2.1.</span> <span class="toc-text">Set</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/03/09/java-crash-course-3%E7%AC%94%E8%AE%B0/" title="java crash course 3笔记"><img src="https://wallpaperaccess.com/full/1571180.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="java crash course 3笔记"/></a><div class="content"><a class="title" href="/2025/03/09/java-crash-course-3%E7%AC%94%E8%AE%B0/" title="java crash course 3笔记">java crash course 3笔记</a><time datetime="2025-03-09T08:14:34.000Z" title="发表于 2025-03-09 16:14:34">2025-03-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/03/09/java-crash-course-2-4%E7%AC%94%E8%AE%B0/" title="java crash course 2.4笔记"><img src="https://wallpaperaccess.com/full/1571180.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="java crash course 2.4笔记"/></a><div class="content"><a class="title" href="/2025/03/09/java-crash-course-2-4%E7%AC%94%E8%AE%B0/" title="java crash course 2.4笔记">java crash course 2.4笔记</a><time datetime="2025-03-09T07:52:28.000Z" title="发表于 2025-03-09 15:52:28">2025-03-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/03/09/java-crash-course-2-2%E7%AC%94%E8%AE%B0/" title="java crash course 2.2笔记"><img src="https://wallpaperaccess.com/full/1571180.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="java crash course 2.2笔记"/></a><div class="content"><a class="title" href="/2025/03/09/java-crash-course-2-2%E7%AC%94%E8%AE%B0/" title="java crash course 2.2笔记">java crash course 2.2笔记</a><time datetime="2025-03-09T07:46:15.000Z" title="发表于 2025-03-09 15:46:15">2025-03-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/03/09/js%E7%AC%AC8%E7%AB%A0/" title="无题"><img src="https://wallpaperaccess.com/full/771415.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2025/03/09/js%E7%AC%AC8%E7%AB%A0/" title="无题">无题</a><time datetime="2025-03-09T06:53:30.293Z" title="发表于 2025-03-09 14:53:30">2025-03-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/03/09/js%E7%AC%AC7%E7%AB%A0/" title="无题"><img src="https://wallpaperaccess.com/full/1571180.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2025/03/09/js%E7%AC%AC7%E7%AB%A0/" title="无题">无题</a><time datetime="2025-03-09T06:53:30.292Z" title="发表于 2025-03-09 14:53:30">2025-03-09</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://wallpaperaccess.com/full/771415.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2025 By 彭雨晴</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="true"></script></div></body></html>
